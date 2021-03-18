@@ -1,1 +1,158 @@
 # fuzzing-tutorial
+## 1 Books
+
+- [The Fuzzing Book](https://www.fuzzingbook.org/) (2019)：该书以原理+代码练习为基础，从 0 到 1 完成一个模糊测试框架，结合实际的练习，如果想编写自己的测试框架，可以参考本书。
+- [Fuzzing for Software Security Testing and Quality Assurance](https://www.amazon.com/Fuzzing-Software-Security-Testing-Assurance/dp/1608078507/) (2018)：本书将模糊测试的思想引入软件开发生命周期，事实上很多高效的 fuzzing 测试往往在开发阶段就已经考虑到，该书探讨了 fuzz 工具的发展，不仅包括一些新兴开源工具，也涵盖诸多商用的 fuzzer，如何为软件开发项目选择合适的 fuzzer 也是本书的主题之一。
+
+## 2 Articles/Papers
+
+本章收录安全顶会和一些期刊上的经典论文，大而全不是我们的目的，只是想选择其中一些技术价值比较高或者比较新颖的文章，方便后续的学习。
+
+### Others
+
+- [The Art, Science, and Engineering of Fuzzing: A Survey](https://ieeexplore.ieee.org/document/8863940) (2019)：韩国科学技术研究院学者提出的一个通用 fuzz 模型，包含很多 fuzz 相关概念，在介绍 fuzz 技术的基础上，有一个包含 60+ fuzz 工具的对比，如果想知道更多 fuzz 工具，也许可以从该表中找到。
+
+- [Fuzzing: a survey](https://cybersecurity.springeropen.com/articles/10.1186/s42400-018-0002-y) (2018)：清华大学相关机构发表在 [*Cybersecurity*](https://cybersecurity.springeropen.com/) 上的一篇关于 fuzzing 技术的调查。尽管论文中有一些值得商榷的描述，但是该论文可以让我们大概了解 fuzzing 历史、原理以及技术分类。
+- [Evaluating Fuzz Testing, 2018](http://www.cs.umd.edu/~mwh/papers/fuzzeval.pdf)：美国马里兰大学学者在 CCS 2018 上的一篇论文，总结近些年 fuzzing 的发展，分析了安全顶会上提出的多个工具，涵盖了 fuzzing 完整的生命周期，是一篇不错的 survery。
+- [Fuzzing: Art, Science, and Engineering, 2018](https://arxiv.org/pdf/1812.00140.pdf)：一个非常详尽的 survery，包括各个工具的对比，也涵盖了 fuzzing 的各个阶段。
+- [Fuzzing: State of the art, 2018](https://ieeexplore.ieee.org/document/8371326)：国人发表在 [IEEE Transactions on Reliability](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=24)  上的论文，可以大概了解 fuzzing 思想，但是分析并不深入，相比上面两篇文章，有一定的差距。
+- [Source-and-Fuzzing](https://github.com/lcatro/Source-and-Fuzzing) (2019)： 一些阅读源码和 fuzzing 的经验，涵盖黑盒与白盒测试，一系列文章对 fuzz 的分析较为深入，值得一看。
+- [Effective File Format Fuzzing – Thoughts, Techniques and Results](https://www.youtube.com/watch?v=qTTwqFRD1H8) (Blackhat Europe 2015)：作者主要分享多年来对多个开源和商用软件的 fuzz 方法，包括 Adobe Reader、 Wireshark、 Hex-Rays IDA Pro 等软件。
+
+### NDSS
+
+- [HFL: Hybrid Fuzzing on the Linux Kernel](https://www.unexploitable.systems/publication/kimhfl/) (2020)：美国[*俄勒冈州*立大学](https://www.baidu.com/link?url=sn1QvZgfhW08eCz3smcHQsKmxmvdxUVfs90iYf52Qk_F7JedSab1kMqjelKzllZ-P1N3hOHeNCA6tKlSfhfjRdKefUtwi5pzYrjN-fcKWKG&wd=&eqid=fda401e6000301af00000006604737c0)提出的一个新兴混合 fuzz 工具。据作者所属，HFL 代码覆盖率分别比 Moonshine 和 Syzkaller 高出15%和26%，并发现 20+ 个内核漏洞。该工具好像没有开源。
+- [HotFuzz: Discovering Algorithmic Denial-of-Service Vulnerabilities Through Guided Micro-Fuzzing](https://www.researchgate.net/publication/339164746_HotFuzz_Discovering_Algorithmic_Denial-of-Service_Vulnerabilities_Through_Guided_Micro-Fuzzing) (2020)：美国波士顿大学开发的 HotFuzz，这是一个用于自动发现 Java 库中 AC （算法复杂性）漏洞框架 。
+- [Not All Coverage Measurements Are Equal: Fuzzing by Coverage Accounting for Input Prioritization](https://www.ndss-symposium.org/wp-content/uploads/2020/02/24422.pdf) (2020)：中科院软件所开发的  [TortoiseFuzz](https://github.com/TortoiseFuzz/TortoiseFuzz) ，设计了一种新的模糊输入优化方案，发现了 20+ 0 day 漏洞。
+- [PeriScope: An Effective Probing and Fuzzing Framework for the Hardware-OS Boundary](https://people.cs.kuleuven.be/~stijn.volckaert/papers/2019_NDSS_PeriScope.pdf) (2019)：加州大学研发的一个名为 PeriScope 的 fuzz 工具，主要针对内核与硬件的边界部分，该工具好像没有开源。
+- [INSTRIM: Lightweight Instrumentation for Coverage-guided Fuzzing](https://www.ndss-symposium.org/wp-content/uploads/2018/07/bar2018_14_Hsu_paper.pdf) (2018)：台湾大学，学术研究，探讨了覆盖导向模糊的轻量级检测方法。
+- [IOTFUZZER: Discovering Memory Corruptions in IoT Through App-based Fuzzing](### 固件) (2018)：见固件章节。
+- [What You Corrupt Is Not What You Crash: Challenges in Fuzzing Embedded Devices](http://s3.eurecom.fr/docs/ndss18_muench.pdf)：嵌入式固件 fuzzing 的一些难点，固件的 fuzz 往往得不到反馈，该论文基于Avatar 和 PANDA 设计了六种不同启发式算法，提高嵌入式系统 fuzz 效率。
+- [Enhancing Memory Error Detection for Large-Scale Applications and Fuzz Testing](https://lifeasageek.github.io/papers/han:meds.pdf) (2018)：韩国科学技术研究院对内存错误检测算法的研究。
+- [DELTA: A Security Assessment Framework for Software-Defined Networks](https://www.ndss-symposium.org/wp-content/uploads/2017/09/ndss201702A-1LeePaper.pdf) (2017)：韩国科学技术研究院对 SDN 设计的安全评估框架。
+
+### USENIX Security
+
+- [Analysis of DTLS Implementations Using Protocol State Fuzzing](https://www.usenix.org/conference/usenixsecurity20/presentation/fiterau-brostean) (2020)：瑞典[*乌普萨拉大学*](https://www.baidu.com/link?url=xRk-x5EtMxr6AhX3qTQWGiC1pbZmfh8mem1x9_o2MuZAhAFm5haijjK1M21ZlPbJGARysEoJZmQxijhoCzPmXOnj135atLDX4m9thgw0MEI2u47O-pk1BH4bTKSYGCdYnbTL6FL18ZDlCKLg8ypFHq&wd=&eqid=8278386e000070bd000000056047391c) 对 DTLS 实现的首次全面分析，提出的 [TLS-Attacker](https://github.com/tls-attacker/TLS-Attacker)  是一个用于分析TLS实现的开源框架。
+- [EcoFuzz: Adaptive Energy-Saving Greybox Fuzzing as a Variant of the Adversarial Multi-Armed Bandit](https://www.usenix.org/conference/usenixsecurity20/presentation/yue) (2020)： [EcoFuzz](https://github.com/MoonLight-SteinsGate/EcoFuzz) 是国防科技大学师生开发的基于 AFL 的自适应节能灰盒模糊器。 基于AFL 的基础上，开发了独特的自适应调度算法以及基于概率的搜索策略，根据结果，EcoFuzz 可以减少 AFL 32％的用例，从而达到 AFL 214％的路径覆盖率。
+- [FANS: Fuzzing Android Native System Services via Automated Interface Analysis](https://www.usenix.org/conference/usenixsecurity20/presentation/liu) (2020)：清华大学张超团队联合 360  提出了一种基于自动生成的模糊测试解决方案 FANS，以查找 Android 本机系统服务中的漏洞，该方案也没有开源。 
+- [Fuzzing Error Handling Code using Context-Sensitive Software Fault Injection](https://www.usenix.org/conference/usenixsecurity20/presentation/jiang) (2020)： 清华大学蒋祖明和白佳举提出了一个名为 FIFUZZ 的新模糊测试框架，检测异常处理。FIFUZZ 的核心是上下文相关的软件故障注入（SFI）方法，该方法可以有效地覆盖不同调用上下文中的错误处理代码，以查找隐藏在具有复杂上下文的错误处理代码中的深层错误。
+- [FuzzGen: Automatic Fuzzer Generation, 2020](https://www.usenix.org/conference/usenixsecurity20/presentation/ispoglou)： Kyriakos Ispoglou 等人提出的对库接口进行分析的工具。 这是一种用于在给定环境中自动合成复杂库的模糊器的工具。[FuzzGen](https://github.com/HexHive/FuzzGen) 利用*整个系统分析*来推断库的接口，并专门为该库合成模糊器。FuzzGen 不需要人工干预，可以应用于各种库。此外，生成的模糊器利用LibFuzzer 来实现更好的代码覆盖率并暴露库深处的错误。 
+- [GREYONE: Data Flow Sensitive Fuzzing, 2020](https://www.usenix.org/conference/usenixsecurity20/presentation/gan)：清华大学张超团队提出的另外一个一种数据流敏感的模糊解决方案 GREYONE。思想可观，由于并没有开源，落地比较困难。
+- [Fuzzification: Anti-Fuzzing Techniques, 2019](https://www.usenix.org/conference/usenixsecurity19/presentation/jung)： *佐治亚理工学院* 学者提出的一个对抗 fuzzing 的手段，主要是防止安全人员对自己的产品进行 fuzzing，这个视角比较新颖，值得一看。
+- [AntiFuzz: Impeding Fuzzing Audits of Binary Executables, 2019](https://www.usenix.org/conference/usenixsecurity19/presentation/guler)：同样是一个对抗 fuzzing 的方案，只不过引入了 不同的技术保护二进制可执行文件，防止被 fuzzing。
+- [MoonShine: Optimizing OS Fuzzer Seed Selection with Trace Distillation, 2018](https://www.usenix.org/conference/usenixsecurity18/presentation/pailoor)：哥伦比亚大学团队开发的 [MoonShine](https://github.com/shankarapailoor/moonshine)，这是一种新颖的策略，可从真实程序的系统调用中提取 fuzz 种子。作为对 Syzkaller 的扩展， MoonShin 能够将 Syzkaller 的 Linux 内核代码覆盖率平均提高 13％。
+- [QSYM : A Practical Concolic Execution Engine Tailored for Hybrid Fuzzing, 2018](https://www.usenix.org/conference/usenixsecurity18/presentation/yun)：*佐治亚理工学院* 学者设计了一种快速的，称为 [QSYM](https://github.com/sslab-gatech/qsym) 的 Conolic 执行引擎，支持混合 fuzzing。
+- [OSS-Fuzz - Google's continuous fuzzing service for open source software, 2017](https://www.usenix.org/conference/usenixsecurity17/technical-sessions/presentation/serebryany)：谷歌的 OSS-Fuzz 框架，没什么好说的，主要是帮助开发人员在开发阶段引入的框架，继承多个 fuzz 工具。
+- [kAFL: Hardware-Assisted Feedback Fuzzing for OS Kernels, 2017](https://www.usenix.org/conference/usenixsecurity17/technical-sessions/presentation/schumilo)：对于内核的 fuzzing，崩溃往往会导致系统重启，内核中的任意一个错误都可能带来深远影响。  *波鸿鲁尔大学的*谢尔盖·舒米舒等人提出的独立于*操作系统*和*硬件辅助的方式*解决了覆盖指导的内核模糊问题：利用虚拟机管理程序和英特尔的 *Processor Trace*（PT）技术。 
+
+### IEEE S&P
+
+- [IJON: Exploring Deep State Spaces via Fuzzing, 2020](https://www.syssec.ruhr-uni-bochum.de/media/emma/veroeffentlichungen/2020/02/27/IJON-Oakland20.pdf)： 通过改造 AFL 探测程序的空间状态，发现更多程序行为，并拿游戏"超级玛丽"来作演示。 作者对超级玛丽作了修改，使所有的键盘命令都可以从标准输入中读取，并且马里奥只能不停地向右跑，只要停下来就死掉，这个设计主要是为节省时间。 
+- [Krace: Data Race Fuzzing for Kernel File Systems, 2020](https://www.cc.gatech.edu/~mxu80/pubs/xu:krace.pdf)：介绍了 KRACE，一个端到端的模糊框架，它将并发方面引入基于覆盖引导的文件系统 fuzzing 中。
+- [Pangolin:Incremental Hybrid Fuzzing with Polyhedral Path Abstraction, 2020](https://qingkaishi.github.io/public_pdfs/SP2020.pdf)： 香港科技大学，混合 fuzing 结合了符号执行与模糊测试的优点，已经逐渐成为基于覆盖引导的 fuzzing 技术的重要发展方向之一。尽管在实现高覆盖率方面取得了巨大进展，但众所周知，混合模糊仍然存在效率问题。  将约束求解后对信息重用起来，是有可能实现 Constrained Mutation 和 Guided Constraint Solving，从而**提升混合 fuzz 效率**。 
+- [RetroWrite: Statically Instrumenting COTS Binaries for Fuzzing and Sanitization, 2020](https://www.semanticscholar.org/paper/RetroWrite%3A-Statically-Instrumenting-COTS-Binaries-Dinesh-Burow/845cafb153b0e4b9943c6d9b6a7e42c14845a0d6)：该团队开发了一种**二进制重写工具 retrowrite** 用于支持 AFL 和 ASAN，并证明它可以在保持精度的同时达到编译器级的性能。使用 retrowriter 重写用于覆盖引导的二进制文件在性能上与编译器检测的二进制文件相同，性能比基于 defaultQEMU 的检测高出 4.5 倍。该工具已开源：https://github.com/HexHive/retrowrite/，同时限制非常多，比如目标二进制只能是 x86_64 架构，必须包含符号表等。
+- [Full-speed Fuzzing: Reducing Fuzzing Overhead through Coverage-guided Tracing, 2019](https://www.computer.org/csdl/proceedings-article/sp/2019/666000b122/19skgbGVFEQ)：  弗吉尼亚理工大学 ，创建了一个基于静态二进制工具或 Dyninst 的实现，称为 [UnTracer](https://github.com/FoRTE-Research/UnTracer-AFL) ，该工具能够**降低 fuzzing 开销**，从而提高速度。
+- [Fuzzing File Systems via Two-Dimensional Input Space Exploration, 2019](https://www.computer.org/csdl/proceedings-article/sp/2019/666000a594/19skfLYOpaw)： 本文的作者佐治亚理工学院的许文及作者所在的研究组，长期从事二进制相关研究。 本工作实现了一个基于反馈进化的 fuzzer——[JANUS](https://github.com/sslab-gatech/janus)，**通用文件系统 fuzzer**，可以高效的探索文件系统的两个维度的输入空间。
+- [NEUZZ: Efficient Fuzzing with Neural Program Smoothing, 2019](https://www.computer.org/csdl/proceedings-article/sp/2019/666000a900/19skg5XghG0)： 哥伦比亚大学落地项目，**利用神经网络来模拟程序的分支行为**。 [neuzz](https://github.com/Dongdongshe/neuzz) 通过有策略地修改现有 seeds 的一些 bytes 以期来产生 interesting seeds 从而能触发未执行过的 edge。而这个策略要借助神经网络才能得以具体实施。
+- [Razzer: Finding Kernel Race Bugs through Fuzzing, 2019](https://www.computer.org/csdl/proceedings-article/sp/2019/666000a296/19skfwZLirm)：韩国科学技术院 (KAIST) DR Jeong  设计并提出了**针对内核中的数据竞争类型漏洞的模糊测试（fuzzing）工具 Razzer** 。 [Razzer](https://github.com/compsec-snu/razzer) 的两阶段模糊测试基于Syzkaller。确定性调度程序是使用 QEMU / KVM 实现的。
+- [Angora: Efficient Fuzzing by Principled Search, 2018](http://web.cs.ucdavis.edu/~hchen/paper/chen2018angora.pdf)：上海交通大学 peng chen 等人开发的 [Angora](https://github.com/AngoraFuzzer/Angora)，主要目标是**提高分支覆盖率，不使用符号执行的方法来解决路径约束** 。 该工具目前活跃度较高，一直处于稳定更新中。
+- [CollAFL: Path Sensitive Fuzzing, 2018](http://chao.100871.net/papers/oakland18.pdf)：清华大学张超团队对AFL中的 coverage inaccuracy 和 seed **选择策略做了改进**，改进后的工具称为 [CollAFL](https://github.com/batgui/collafl)。
+- [T-Fuzz: fuzzing by program transformation, 2018](https://nebelwelt.net/publications/files/18Oakland.pdf)： Purdue University 的 Peng Hui 等人研发的 [T-fuzz](https://github.com/HexHive/T-Fuzz) 通过**去掉 santiy check 来提高覆盖率**。T-fuzz 利用覆盖率来引导产生输入。当不能访问到新的路径时，T-fuzz会去掉 check，以保证 fuzz 能继续进行，发现新的路径和 bug。 
+- [Skyfire: Data-Driven Seed Generation for Fuzzing, 2017](https://www.ieee-security.org/TC/SP2017/papers/42.pdf)： 针对**处理高度结构化输入**的程序(比如解析XML的引擎程序)，本文提出了一种**种子生成方法**，通过大量样本训练**带概率的上下文有关文法**，通过训练好的文法，自动生成符合程序输入要求的种子，用于后续的Fuzz。 
+
+### ACM CCS
+
+- [DIFUZE: Interface Aware Fuzzing for Kernel Drivers, 2017](https://acmccs.github.io/papers/p2123-corinaA.pdf) ： 圣塔芭芭拉大学的 Jake Corina 等提出的一个 seed 生成方案。通过**优化种子生成**，同样也可以达到提高 fuzzing 效率的效果。经过验证，[DIFUZE](https://github.com/ucsb-seclab/difuze) 相较于现有的 fuzzer 在 ioctl() 接口上，确实存在着明显的优势。这也是显然的，DIFUZE 相较于其他的工具在 fuzzing这样一个需要超大信息量的接口上提供了足够的信息，支撑它挖掘出大于其他工具几个数量级的信息量。
+- [Learning to Fuzz from Symbolic Execution with Application to Smart Contracts, 2019](https://files.sri.inf.ethz.ch/website/papers/ccs19-ilf.pdf)：苏黎世联邦理工学院 Jingxuan He 等人提出了一种从符号执行中学习 fuzzer 的新方法，将其应用于智能合约中。
+- [Matryoshka: fuzzing deeply nested branches, 2019](https://web.cs.ucdavis.edu/~hchen/paper/chen2019matryoshka.pdf)： 字节跳动人工智能实验室，灰盒fuzz近年来取得了令人瞩目的进展，从基于启发式的随机变异进化到求解单个分支约束。但是，它们很难解决包含深度嵌套条件语句的路径约束。作者开发了一个工具 Matryoshka1 实现深层次嵌套路径的覆盖。
+- [Hawkeye: Towards a Desired Directed Grey-box Fuzzer, 2018](https://chenbihuan.github.io/paper/ccs18-chen-hawkeye.pdf)：新加坡南洋理工大学，Hawkeye 是一个定向模糊测试技术，本文提出 4 个定向型 fuzzer 的特性并进行改进：考虑所有到达目标点的路径，不管长短；平衡静态分析的开销和实用性；合理分配能量；适应性变异策略。
+- [IMF: Inferred Model-based Fuzzer, 2017](http://daramg.gift/paper/han-ccs2017.pdf)：现有的内核模糊技术涉及将随机输入值输入到内核 API 函数中。然而，这样一个简单方法并没有揭示内核代码深处潜在的 bug，作者提出 IMF 模型，利用API函数调用之间的推断依赖模型来发现内核的深层缺陷。
+- [SemFuzz: Semantics-based Automatic Generation of Proof-of-Concept Exploits, 2017](https://www.informatics.indiana.edu/xw7/papers/p2139-you.pdf)： 印第安纳大学伯明顿分校华人研发的 SemFuzz，这是一种利用漏洞相关文本（如 CVE 报告和 Linux git 日志）来指导 PoC 攻击自动生成的新技术。
+- [Directed Greybox Fuzzing, 2017](https://dl.acm.org/citation.cfm?id=3134020)： 2017 年 Bohme 提出了 DGF 的概念，并且完成了名为 AFLGo 的工具，即定向模糊测试。
+- [SlowFuzz: Automated Domain-Independent Detection of Algorithmic Complexity Vulnerabilities, 2017](https://arxiv.org/pdf/1708.08437.pdf)：主要讲述 fuzzing 中正则表达式带来的问题，并实现了相应的改进算法。
+- [DIFUZE: Interface Aware Fuzzing for Kernel Drivers, 2017](https://acmccs.github.io/papers/p2123-corinaA.pdf)： 圣塔芭芭拉大学的 Jake Corina  设计并完成了**针对用户态与内核驱动关键接口 ioctl() 的 fuzzing 工具 DIFUZE**， [DIFUZE](https://github.com/ucsb-seclab/difuze) 首先对内核代码进行静态分析，完成interface 的 recovery，获取 interface 的关键信息，并基于这些有效的信息去生成更加合理的 fuzzing 输入，得到一个更好的 fuzzing 效果。  
+
+## 3 Tools
+
+这里收录常见并且实用的工具，多数工具经过笔者实践，具有一定的普适性。也有一些优秀但是很久没有维护更新，并且适用场景非常有限的工具，未包含在其中。
+
+### 变异器
+
+- [Radamsa](https://gitlab.com/akihe/radamsa) ：Radamsa 是用于健壮性测试的测试用例生成器。通过读取有效数据的样本文件并从中生成令人感兴趣的不同输出来工作。 
+- [zzuf](https://github.com/samhocevar/zzuf) ：一个 fuzzer 的输入程序，作为一个优秀的开源项目，已经有不少国外的大型项目引入 zzuf，作为各种畸形数据的生成。
+
+### 二进制
+
+- [afl-unicorn: Fuzzing The 'Unfuzzable' ](https://www.youtube.com/watch?v=OheODvF0884)： [Battelle](https://www.battelle.org/cyber) 在  **ShmooCon 2018** 上发布的一个工具，已经有大佬将演讲视频添加[中文字幕](https://www.bilibili.com/video/av83051615/)并上传到 B 站上。该[工具](https://github.com/Battelle/afl-unicorn) 弥补了 afl 的不足，可以对任意二进制代码片段进行 fuzz，作为一个完全使用**黑盒进行 fuzz** 的工具，afl-unicorn 也保留了 afl 原有的代码覆盖率统计，根据反馈对种子进行变异，从而提高代码覆盖。
+
+- [Intriguer: Field-Level Constraint Solving for Hybrid Fuzzing](https://dl.acm.org/doi/10.1145/3319535.3354249)：韩国延世大学发布在安全顶会 **CCS 2019** 上的一篇关于 fuzzer 性能改进的文章。该团队提出了一个基于 AFL，名为 [Intriguer](https://github.com/seclab-yonsei/intriguer) 的新型**混合 fuzzer**。通过污点分析和指令跟踪，经过笔者实践，该工具能够覆盖更深层次的代码路径。但是同时也存在 bug，会在 `/tmp` 目录下生成大量冗余文件。
+
+- [Unicorefuzz: On the Viability of Emulation for Kernelspace Fuzzing](https://www.usenix.org/system/files/woot19-paper_maier.pdf) ：柏林工业大学学者发表在安全顶会  **USENIX Security '19**  上的一篇关于 **fuzzing 内核**的文章。相对于 syzkaller， [unicorefuzz](https://github.com/fgsect/unicorefuzz) 配置更加简单，能够 fuzz 路径较深的一些函数。
+- [libFuzzer](http://llvm.org/docs/LibFuzzer.html) ：谷歌开发的一个基于覆盖引导的 fuzzer，主要针对库提供的**接口**进行 fuzzing。
+- [Honggfuzz](https://github.com/google/honggfuzz)：同样是谷歌开发的一个类似于 afl 的工具，只是 honggfuzz 基于反馈驱动，多线程和多进程，fuzz 速度相比于 afl 有一个质的飞跃。
+- [syzkaller](https://github.com/google/syzkaller)：优秀的**内核 fuzz** 工具，可以针对各种**驱动接口**进行 fuzzing。
+- [frida-fuzzer](https://github.com/andreafioraldi/frida-fuzzer)： Frida-Fuzzer 是一款针对 API 的内存模糊测试框架，该工具的设计和开发灵感来源于 afl/afl++，Frida-Fuzzer 的当前版本支持在 GNU/Linux x86_64 和 Android x86——64 平台上运行。 
+- [winafl](https://github.com/googleprojectzero/winafl)：afl 的一个分支项目，将 afl 用于Windows 平台。
+- [trinity](https://github.com/kernelslacker/trinity)：Linux system call fuzzer，对于 **Linux 系统调用**的模糊测试工具。
+- [NtCall64](https://github.com/hfiref0x/NtCall64)：Windows NT x64 syscall fuzzer，基于 NtCall 的 **Windows 系统调用**模糊测试工具。
+- [kDriver-Fuzzer](https://github.com/k0keoyo/kDriver-Fuzzer)：基于 ioctlbf 框架编写的驱动漏洞挖掘工具 kDriver Fuzzer，**驱动 fuzzer**。
+- [fuzzball](https://github.com/bitblaze-fuzzball/fuzzball)：FuzzBALL是基于 BitBlaze Vine 库的x86（和少许ARM）二进制代码的**符号执行**工具 
+
+### API/协议
+
+- [Sulley](https://github.com/OpenRCE/sulley)/[Boofuzz](https://github.com/jtpereyda/boofuzz)：Sulley 是一个模糊测试框架。主要用于协议的 fuzz，如今已经不再维护。 [Boofuzz](https://github.com/jtpereyda/boofuzz) 是古老的 [Sulley](https://github.com/OpenRCE/sulley) 模糊测试框架的分支和后续版本。除了大量错误修复外，boofuzz 扩展更多新特性。
+- [fuzzowski](https://github.com/nccgroup/fuzzowski)：基于 boofuzz 的网络协议模糊测试工具，基于 sulley 的数据变异。
+- [Peach](https://github.com/MozillaSecurity/peach)：Peach 是 Michael  团队开发的一个模糊测试框架，最初为开源软件，后续部分核心测试套**商用**发布。Peach 专注于文件格式的 fuzz，同时针对各种协议的 fuzz 也十分友好。
+- [Defensics](https://www.synopsys.com/software-integrity/security-testing/fuzz-testing.html)： Defensics 是一个基于变异的 fuzzing **商用**工具，简单而强大，广泛支持各种协议，具有成熟的测试套，也具有较强扩展性，用户可以通过模板创建属于自己的测试套。
+- [bsSTORM](https://beyondsecurity.com/bestorm-and-the-sdl.html?cn-reloaded=1)：**商用工具**，覆盖完整的软件生命周期，看上去更擅长协议 fuzz。
+- [API-fuzzer](https://github.com/Fuzzapi/API-fuzzer)：使用常见的渗透测试技术和已知漏洞对一些网络 **API** 请求进行 fuzz。
+- [domato](https://github.com/googleprojectzero/domato) ：googleprojectzero 开发的一个专门用于浏览器的黑盒 fuzz 工具，用法简单，通过让浏览器访问生成各种随机的前端页面，观察浏览器的状态。
+
+### 固件
+
+- [IOTFUZZER: Discovering Memory Corruptions in IoT Through App-based Fuzzing](https://www.ndss-symposium.org/wp-content/uploads/2018/02/ndss2018_01A-1_Chen_paper.pdf)：香港大学  Jiongyi Chen  发表在 **NDSS 2018** 上的一篇关于固件 fuzzing 的文章，作者借助 IoT 设备的移动端 App 设计了一个黑盒模糊测试工具 [IOTFuzzer](https://github.com/zyw-200/IOTFuzzer_Full) 分析 IoT 设备上的内存错误漏洞。通过测试了 17 个不同的 IoT 设备，最终发现 15 个内存错误漏洞，其中包括了 8 个未知的漏洞。
+
+- [FIRM-AFL: High-Throughput Greybox Fuzzing of IoT Firmware via Augmented Process Emulation](https://www.usenix.org/conference/usenixsecurity19/presentation/zheng)：由中科院信工所 Yaowen Zheng 发表在 **USENIX Security '19** ， [FIRM-AFL](https://github.com/zyw-200/FirmAFL) 是第一个用于物联网固件的高质量灰盒模糊器，此工具的劣势在于只能 fuzz Firmadyne 能够正常模拟的固件。
+
+- [FIRMCORN: Vulnerability-Oriented Fuzzing of IoT Firmware via Optimized Virtual Execution](https://ieeexplore.ieee.org/document/8990098)：发表在  [IEEE Access](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6287639) 2020 年的期刊上，作为基于优化虚拟执行的 IoT 固件模糊测试框架 [FIRMCORN](https://github.com/FIRMCORN-Fuzzing/FIRMCORN)，作者声称是首次面向 IoT 固件的模糊测试框架。
+
+## 4 Blogs
+
+如果不想看这么多理论知识，只是想快速将工具运用于实际项目中，直接参考以下博客，即可对各种 fuzzing 工具快速入门。
+
+**AFL**
+
+- [AFL漏洞挖掘技术漫谈（一）：用AFL开始你的第一次Fuzzing](https://www.freebuf.com/articles/system/191543.html)
+
+- [AFL漏洞挖掘技术漫谈（二）：Fuzz结果分析和代码覆盖率](https://www.freebuf.com/articles/system/197678.html) 
+
+- [深入分析 afl / qemu-mode(qemu模式) / afl-unicorn 编译及安装存在的问题以及相应的解决方案](https://blog.csdn.net/song_lee/article/details/105082092)
+
+**boofuzz**
+
+- [IoT 设备网络协议模糊测试工具boofuzz实战](https://blog.csdn.net/song_lee/article/details/104334096)
+
+**libfuzzer**
+
+- [fuzz实战之libfuzzer](https://www.secpulse.com/archives/71898.html)
+
+**Peach**
+
+- [深入探究文件Fuzz工具之Peach实战](https://www.freebuf.com/sectool/120650.html) 
+- [工控网络协议模糊测试：用peach对modbus协议进行模糊测试](https://cloud.tencent.com/developer/article/1093368)
+- [Peach原理简介与实战：以Fuzz Web API为例](https://www.freebuf.com/sectool/219584.html) 
+
+**内核 fuzz**
+
+-  [内核漏洞挖掘技术系列(1)——trinity](https://xz.aliyun.com/t/4760) 
+-  [内核漏洞挖掘技术系列(2)——bochspwn](https://xz.aliyun.com/t/4800) 
+-  [内核漏洞挖掘技术系列(3)——bochspwn-reloaded(1)](https://xz.aliyun.com/t/4921)
+-  [内核漏洞挖掘技术系列(3)——bochspwn-reloaded(2)](https://xz.aliyun.com/t/4932) 
+-  [内核漏洞挖掘技术系列(4)——syzkaller(1)](https://xz.aliyun.com/t/5079) 
+
+-  [Fuzzing a Pixel 3a Kernel with Syzkaller](https://blog.senyuuri.info/2020/04/16/fuzzing-a-pixel-3a-kernel-with-syzkaller/) 
+
+其他
+
+- [基于 Unicorn 和 LibFuzzer 的模拟执行 fuzzing](http://galaxylab.com.cn/%e5%9f%ba%e4%ba%8eunicorn%e5%92%8clibfuzzer%e7%9a%84%e6%a8%a1%e6%8b%9f%e6%89%a7%e8%a1%8cfuzzing/) (2019)： 银河实验室对基于 unicorn 的模拟执行 fuzzing 技术进行了研究。在上次研究的基础上，进一步整合解决了部分问题，初步实现了基于 Unicorn 和 LibFuzzer 的模拟执行fuzzing 工具：[uniFuzzer](https://github.com/PAGalaxyLab/uniFuzzer)
