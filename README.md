@@ -1,10 +1,31 @@
+
+
 # fuzzing-tutorial
+
+fuzzing 从入门到进阶，这里收录了经典的 fuzzing 书籍、历年安全顶会上有关 fuzzing 的经典论文、常用的 fuzzing 工具、可以快速入手 fuzzing 工具的博客。
+
+## Table of Contents
+
+- [1 Books](#1 Books)
+- [2 Articles&Papers](#2 Articles/Papers)
+  + [Others](#Others)
+  + [NDSS](#NDSS)
+  + [USENIX Security](#USENIX Security)
+  + [IEEE S&P](#IEEE S&P)
+  + [ACM CCS](#ACM CCS)
+- [3 Tools](#3 Tools)
+  + [变异器](#变异器)
+  + [二进制](#二进制)
+  + [API/协议](#API/协议)
+  + [固件](#固件)
+- [4 Blogs](#4 Blogs)
+
 ## 1 Books
 
 - [The Fuzzing Book](https://www.fuzzingbook.org/) (2019)：该书以原理+代码练习为基础，从 0 到 1 完成一个模糊测试框架，结合实际的练习，如果想编写自己的测试框架，可以参考本书。
 - [Fuzzing for Software Security Testing and Quality Assurance](https://www.amazon.com/Fuzzing-Software-Security-Testing-Assurance/dp/1608078507/) (2018)：本书将模糊测试的思想引入软件开发生命周期，事实上很多高效的 fuzzing 测试往往在开发阶段就已经考虑到，该书探讨了 fuzz 工具的发展，不仅包括一些新兴开源工具，也涵盖诸多商用的 fuzzer，如何为软件开发项目选择合适的 fuzzer 也是本书的主题之一。
 
-## 2 Articles/Papers
+## 2 Articles&Papers
 
 本章收录安全顶会和一些期刊上的经典论文，大而全不是我们的目的，只是想选择其中一些技术价值比较高或者比较新颖的文章，方便后续的学习。
 
@@ -150,7 +171,6 @@
 -  [内核漏洞挖掘技术系列(3)——bochspwn-reloaded(1)](https://xz.aliyun.com/t/4921)
 -  [内核漏洞挖掘技术系列(3)——bochspwn-reloaded(2)](https://xz.aliyun.com/t/4932) 
 -  [内核漏洞挖掘技术系列(4)——syzkaller(1)](https://xz.aliyun.com/t/5079) 
-
 -  [Fuzzing a Pixel 3a Kernel with Syzkaller](https://blog.senyuuri.info/2020/04/16/fuzzing-a-pixel-3a-kernel-with-syzkaller/) 
 
 其他
