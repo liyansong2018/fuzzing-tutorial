@@ -6,19 +6,19 @@ fuzzing 从入门到进阶，这里收录了经典的 fuzzing 书籍、历年安
 
 ## Table of Contents
 
-- [1 Books](#1 Books)
-- [2 Articles&Papers](#2 Articles/Papers)
+- [1 Books](#1-Books)
+- [2 Articles/Papers](#2-Articles/Papers)
   + [Others](#Others)
   + [NDSS](#NDSS)
-  + [USENIX Security](#USENIX Security)
-  + [IEEE S&P](#IEEE S&P)
-  + [ACM CCS](#ACM CCS)
-- [3 Tools](#3 Tools)
+  + [USENIX Security](#USENIX-Security)
+  + [IEEE S&P](#IEEE-S&P)
+  + [ACM CCS](#ACM-CCS)
+- [3 Tools](#3-Tools)
   + [变异器](#变异器)
   + [二进制](#二进制)
   + [API/协议](#API/协议)
   + [固件](#固件)
-- [4 Blogs](#4 Blogs)
+- [4 Blogs](#4-Blogs)
 
 ## 1 Books
 
