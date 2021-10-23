@@ -1,8 +1,9 @@
 
 
-# fuzzing-tutorial
+# Recent Papers/Blogs/Tools Related To Fuzzing
+The blog post contains classic fuzzing books, papers about fuzzing at information security top conferences over the years, commonly used fuzzing tools, and blogs that can quickly learn fuzzing tools.
 
-fuzzing 从入门到进阶，这里收录了经典的 fuzzing 书籍、历年安全顶会上有关 fuzzing 的经典论文、常用的 fuzzing 工具、可以快速入手 fuzzing 工具的博客。
+本篇博文收录了经典的 fuzzing 书籍、历年安全顶会上有关 fuzzing 的经典论文、常用的 fuzzing 工具、可以快速入手 fuzzing 工具的博客。
 
 ## Table of Contents
 
@@ -42,8 +43,12 @@ fuzzing 从入门到进阶，这里收录了经典的 fuzzing 书籍、历年安
 
 ### NDSS
 
-- [HFL: Hybrid Fuzzing on the Linux Kernel](https://www.unexploitable.systems/publication/kimhfl/) (2020)：美国[*俄勒冈州*立大学](https://www.baidu.com/link?url=sn1QvZgfhW08eCz3smcHQsKmxmvdxUVfs90iYf52Qk_F7JedSab1kMqjelKzllZ-P1N3hOHeNCA6tKlSfhfjRdKefUtwi5pzYrjN-fcKWKG&wd=&eqid=fda401e6000301af00000006604737c0)提出的一个新兴混合 fuzz 工具。据作者所属，HFL 代码覆盖率分别比 Moonshine 和 Syzkaller 高出15%和26%，并发现 20+ 个内核漏洞。该工具好像没有开源。
+- [Favocado: Fuzzing the Binding Code of JavaScript Engines Using Semantically Correct Test Cases, 2021](https://www.ndss-symposium.org/ndss-paper/favocado-fuzzing-the-binding-code-of-javascript-engines-using-semantically-correct-test-cases/)：美国亚利桑那州立大学师生提出一种对 **JS 引擎**中绑定层代码进行 fuzzing 的工具：[Favocado](https://github.com/favocado/Favocado)。作者在对在4个不同的JavaScript运行时系统fuzz时，发现了61个新的bug，其中33个是安全漏洞，13个已经被CVE收录。
+- [WINNIE : Fuzzing Windows Applications with Harness Synthesis and Fast Cloning, 2021](https://www.ndss-symposium.org/ndss-paper/winnie-fuzzing-windows-applications-with-harness-synthesis-and-fast-cloning/)： 利用合成和快速克隆对 **Windows 应用程序**进行模糊测试 ， *佐治亚理工学院* 的作者构建了一个端到端 [WINNIE](https://github.com/sslab-gatech/winnie) 系统，包含两个组件：可从二进制文件中自动合成工具的生成器，以及一个高效的 Windows forkserver。 对比工具： WinAFL 。
+- [PGFUZZ: Policy-Guided Fuzzing for Robotic Vehicles, 2021](https://www.ndss-symposium.org/ndss-paper/pgfuzz-policy-guided-fuzzing-for-robotic-vehicles/)：普度大学 *Hyungsub Kim* 等人设计的一个针对机器车辆（ Robotic vehicles, RVs）fuzzing 工具，即 [PGFUZZ](https://github.com/purseclab/PGFUZZ)，应用场景较为有限。
+- [Reinforcement Learning-based Hierarchical Seed Scheduling for Greybox Fuzzing, 2021](https://www.ndss-symposium.org/ndss-paper/reinforcement-learning-based-hierarchical-seed-scheduling-for-greybox-fuzzing/)： *加州大学河滨分校* 华人团队通过引入多级覆盖和设计了基于强化学习的分层调度器，保留更多有价值的种子。即更加细粒度衡量代码覆盖率和更加合理的种子调度策略。
 
+- [HFL: Hybrid Fuzzing on the Linux Kernel](https://www.unexploitable.systems/publication/kimhfl/) (2020)：美国[*俄勒冈州*立大学](https://www.baidu.com/link?url=sn1QvZgfhW08eCz3smcHQsKmxmvdxUVfs90iYf52Qk_F7JedSab1kMqjelKzllZ-P1N3hOHeNCA6tKlSfhfjRdKefUtwi5pzYrjN-fcKWKG&wd=&eqid=fda401e6000301af00000006604737c0)提出的一个新兴混合 fuzz 工具。据作者所属，HFL 代码覆盖率分别比 Moonshine 和 Syzkaller 高出15%和26%，并发现 20+ 个内核漏洞。该工具好像没有开源。
 - [HotFuzz: Discovering Algorithmic Denial-of-Service Vulnerabilities Through Guided Micro-Fuzzing](https://www.researchgate.net/publication/339164746_HotFuzz_Discovering_Algorithmic_Denial-of-Service_Vulnerabilities_Through_Guided_Micro-Fuzzing) (2020)：美国波士顿大学开发的 HotFuzz，这是一个用于自动发现 Java 库中 AC （算法复杂性）漏洞框架 。
 - [Not All Coverage Measurements Are Equal: Fuzzing by Coverage Accounting for Input Prioritization](https://www.ndss-symposium.org/wp-content/uploads/2020/02/24422.pdf) (2020)：中科院软件所开发的  [TortoiseFuzz](https://github.com/TortoiseFuzz/TortoiseFuzz) ，设计了一种新的模糊输入优化方案，发现了 20+ 0 day 漏洞。
 - [PeriScope: An Effective Probing and Fuzzing Framework for the Hardware-OS Boundary](https://people.cs.kuleuven.be/~stijn.volckaert/papers/2019_NDSS_PeriScope.pdf) (2019)：加州大学研发的一个名为 PeriScope 的 fuzz 工具，主要针对内核与硬件的边界部分，该工具好像没有开源。
