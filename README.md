@@ -3,6 +3,8 @@
 # Recent Papers/Blogs/Tools Related To Fuzzing
 The blog post contains classic fuzzing books, papers about fuzzing at information security top conferences over the years, commonly used fuzzing tools, and blogs that can quickly learn fuzzing tools.
 
+→ [English](https://github.com/liyansong2018/fuzzing-tutorial/blob/main/README_en.md)
+
 本篇博文收录了经典的 fuzzing 书籍、历年安全顶会上有关 fuzzing 的经典论文、常用的 fuzzing 工具、可以快速入手 fuzzing 工具的博客。
 
 ## Table of Contents
