@@ -7,9 +7,8 @@
 
 本项目收录了经典的 fuzzing 书籍、历年安全顶会上有关 fuzzing 的经典论文、常用的 fuzzing 工具、可以快速入手 fuzzing 工具的博客，如果你有更多资源，欢迎贡献。
 
-<br />
-
 <hr />
+
 ## Table of Contents
 
 - [1 Books](#1-Books)
