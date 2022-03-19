@@ -1,11 +1,9 @@
 
 
 # Recent Papers/Blogs/Tools Related To Fuzzing
-The blog post contains classic fuzzing books, papers about fuzzing at information security top conferences over the years, commonly used fuzzing tools, and blogs that can quickly learn fuzzing tools.
+> The blog post contains classic fuzzing books, papers about fuzzing at information security top conferences over the years, commonly used fuzzing tools, and blogs that can quickly learn fuzzing tools. → [English](https://github.com/liyansong2018/fuzzing-tutorial/blob/main/README_en.md)
 
-→ [English](https://github.com/liyansong2018/fuzzing-tutorial/blob/main/README_en.md)
-
-本篇博文收录了经典的 fuzzing 书籍、历年安全顶会上有关 fuzzing 的经典论文、常用的 fuzzing 工具、可以快速入手 fuzzing 工具的博客。
+本项目收录了经典的 fuzzing 书籍、历年安全顶会上有关 fuzzing 的经典论文、常用的 fuzzing 工具、可以快速入手 fuzzing 工具的博客，如果你有更多资源，欢迎贡献。
 
 ## Table of Contents
 
@@ -69,7 +67,6 @@ The blog post contains classic fuzzing books, papers about fuzzing at informatio
 - [Nyx: Greybox Hypervisor Fuzzing using Fast Snapshots and Affine Types, 2021](https://www.usenix.org/conference/usenixsecurity21/presentation/schumilo)：德国波鸿鲁尔大学设计并实现了 [RUB-SysSec](https://github.com/RUB-SysSec)/**[Nyx](https://github.com/RUB-SysSec/Nyx)**，用于在云端虚拟机管理程序进行 fuzzing，这是一种高度优化、覆盖引导的虚拟机管理程序模糊器。
 - [Breaking Through Binaries: Compiler-quality Instrumentation for Better Binary-only Fuzzing, 2021](https://www.usenix.org/conference/usenixsecurity21/presentation/nagy)： *弗吉尼亚理工大学*   Stefan Nagy  等人研究实现了**编译器级别的纯黑盒二进制** fuzzing 工具，即 ZAFL，一个将编译器 fuzzing 属性移植到二进制的工具。
 - [The Use of Likely Invariants as Feedback for Fuzzers, 2021](https://www.usenix.org/conference/usenixsecurity21/presentation/fioraldi)： 法国通信系统工程师学校与研究中心 提出了一种新的反馈机制，通过考虑程序变量和常量之间的关系来**增加代码覆盖率**。在名为 [eurecom-s3](https://github.com/eurecom-s3)/**[invscov](https://github.com/eurecom-s3/invscov)** 的原型中实现了该技术，该原型基于 LLVM 以及 AFL++。
-
 - [Analysis of DTLS Implementations Using Protocol State Fuzzing](https://www.usenix.org/conference/usenixsecurity20/presentation/fiterau-brostean) (2020)：瑞典[*乌普萨拉大学*](https://www.baidu.com/link?url=xRk-x5EtMxr6AhX3qTQWGiC1pbZmfh8mem1x9_o2MuZAhAFm5haijjK1M21ZlPbJGARysEoJZmQxijhoCzPmXOnj135atLDX4m9thgw0MEI2u47O-pk1BH4bTKSYGCdYnbTL6FL18ZDlCKLg8ypFHq&wd=&eqid=8278386e000070bd000000056047391c) 对 DTLS 实现的首次全面分析，提出的 [TLS-Attacker](https://github.com/tls-attacker/TLS-Attacker)  是一个用于分析TLS实现的开源框架。
 - [EcoFuzz: Adaptive Energy-Saving Greybox Fuzzing as a Variant of the Adversarial Multi-Armed Bandit](https://www.usenix.org/conference/usenixsecurity20/presentation/yue) (2020)： [EcoFuzz](https://github.com/MoonLight-SteinsGate/EcoFuzz) 是国防科技大学师生开发的基于 AFL 的自适应节能灰盒模糊器。 基于AFL 的基础上，开发了独特的自适应调度算法以及基于概率的搜索策略，根据结果，EcoFuzz 可以减少 AFL 32％的用例，从而达到 AFL 214％的路径覆盖率。
 - [FANS: Fuzzing Android Native System Services via Automated Interface Analysis](https://www.usenix.org/conference/usenixsecurity20/presentation/liu) (2020)：清华大学张超团队联合 360  提出了一种基于自动生成的模糊测试解决方案 FANS，以查找 Android 系统原生服务中的漏洞，作者[刘保证](http://netsec.ccert.edu.cn/people/iromise/)开发的 Native Service Fuzz 工具 fans [开源连接](https://github.com/iromise/fans)，能够根据源码自动推测 Native Service 的接口和入参，进行 fuzzing，工具的限制是需要 AOSP 的编译环境。 
@@ -86,7 +83,6 @@ The blog post contains classic fuzzing books, papers about fuzzing at informatio
 ### IEEE S&P
 
 - [BEACON: Directed Grey-Box Fuzzing with Provable Path Pruning, 2022](https://qingkaishi.github.io/public_pdfs/SP22.pdf)：香港大学，本文介绍了 BEACON，它能够以可证明的方式有效地在路径海中引导灰盒模糊器。也就是说，在计算达到目标的抽象前提条件的轻量级静态分析的辅助下，它们可以在运行时修剪 82.94% 的执行路径，分析开销可以忽略不计（<5h），但保证修剪的路径必须是虚假的尊重目标。
-
 - [DiFuzzRTL: Differential Fuzz Testing to Find CPU Bugs, 2021](https://ieeexplore.ieee.org/document/9519470)：韩国首尔大学，[DifuzzRTL](https://github.com/compsec-snu/difuzz-rtl)，一种专门发现 CPU RTL 漏洞的 fuzz 工具，已开源。
 - [StochFuzz: Sound and Cost-effective Fuzzing of Stripped Binaries by Incremental and Stochastic Rewriting, 2021](https://ieeexplore.ieee.org/document/9519407)： 普渡大学及中国人民大学的华人团队开发了一种新的 fuzz 技术，被称为  incremental and stochastic rewriting ，优于 afl-unicorn，利用更低的开销，提高了**黑盒二进制 fuzzing** 的效率，相关工具已开源：[ZhangZhuoSJTU](https://github.com/ZhangZhuoSJTU)/**[StochFuzz](https://github.com/ZhangZhuoSJTU/StochFuzz)**。
 - [NtFuzz: Enabling Type-Aware Kernel Fuzzing on Windows with Static Binary Analysis, 2021](https://ieeexplore.ieee.org/document/9519448)： 韩国科学技术院 (KAIST)  Jaeseung Cho 等人提出的一个静态二进制分析器，可以自动推断出 Windows 系统调用，该分析器被整合到 [SoftSec-KAIST](https://github.com/SoftSec-KAIST)/**[NTFuzz](https://github.com/SoftSec-KAIST/NTFuzz)**，一个 **Windows 系统调用** fuzzing 框架，首次将静态二进制分析技术与 Windows 内核的 fuzzing 技术相结合。
@@ -111,7 +107,6 @@ The blog post contains classic fuzzing books, papers about fuzzing at informatio
 - [WINNIE : Fuzzing Windows Applications with Harness Synthesis and Fast Cloning, 2021](https://www.ndss-symposium.org/ndss-paper/winnie-fuzzing-windows-applications-with-harness-synthesis-and-fast-cloning/)： 利用合成和快速克隆对 **Windows 应用程序**进行模糊测试 ， *佐治亚理工学院* 的作者构建了一个端到端 [WINNIE](https://github.com/sslab-gatech/winnie) 系统，包含两个组件：可从二进制文件中自动合成工具的生成器，以及一个高效的 Windows forkserver。 对比工具： WinAFL 。
 - [PGFUZZ: Policy-Guided Fuzzing for Robotic Vehicles, 2021](https://www.ndss-symposium.org/ndss-paper/pgfuzz-policy-guided-fuzzing-for-robotic-vehicles/)：普度大学 *Hyungsub Kim* 等人设计的一个针对机器车辆（ Robotic vehicles, RVs）fuzzing 工具，即 [PGFUZZ](https://github.com/purseclab/PGFUZZ)，应用场景较为有限。
 - [Reinforcement Learning-based Hierarchical Seed Scheduling for Greybox Fuzzing, 2021](https://www.ndss-symposium.org/ndss-paper/reinforcement-learning-based-hierarchical-seed-scheduling-for-greybox-fuzzing/)： *加州大学河滨分校* 华人团队通过引入多级覆盖和设计了基于强化学习的分层调度器，保留更多有价值的种子。即更加细粒度衡量代码覆盖率和更加合理的种子调度策略。
-
 - [DIFUZE: Interface Aware Fuzzing for Kernel Drivers, 2017](https://acmccs.github.io/papers/p2123-corinaA.pdf) ： 圣塔芭芭拉大学的 Jake Corina 等提出的一个 seed 生成方案。通过**优化种子生成**，同样也可以达到提高 fuzzing 效率的效果。经过验证，[DIFUZE](https://github.com/ucsb-seclab/difuze) 相较于现有的 fuzzer 在 ioctl() 接口上，确实存在着明显的优势。这也是显然的，DIFUZE 相较于其他的工具在 fuzzing这样一个需要超大信息量的接口上提供了足够的信息，支撑它挖掘出大于其他工具几个数量级的信息量。
 - [Learning to Fuzz from Symbolic Execution with Application to Smart Contracts, 2019](https://files.sri.inf.ethz.ch/website/papers/ccs19-ilf.pdf)：苏黎世联邦理工学院 Jingxuan He 等人提出了一种从符号执行中学习 fuzzer 的新方法，将其应用于智能合约中。
 - [Matryoshka: fuzzing deeply nested branches, 2019](https://web.cs.ucdavis.edu/~hchen/paper/chen2019matryoshka.pdf)： 字节跳动人工智能实验室，灰盒fuzz近年来取得了令人瞩目的进展，从基于启发式的随机变异进化到求解单个分支约束。但是，它们很难解决包含深度嵌套条件语句的路径约束。作者开发了一个工具 Matryoshka1 实现深层次嵌套路径的覆盖。
@@ -134,9 +129,7 @@ The blog post contains classic fuzzing books, papers about fuzzing at informatio
 ### 二进制
 
 - [afl-unicorn: Fuzzing The 'Unfuzzable' ](https://www.youtube.com/watch?v=OheODvF0884)： [Battelle](https://www.battelle.org/cyber) 在  **ShmooCon 2018** 上发布的一个工具，已经有大佬将演讲视频添加[中文字幕](https://www.bilibili.com/video/av83051615/)并上传到 B 站上。该[工具](https://github.com/Battelle/afl-unicorn) 弥补了 afl 的不足，可以对任意二进制代码片段进行 fuzz，作为一个完全使用**黑盒进行 fuzz** 的工具，afl-unicorn 也保留了 afl 原有的代码覆盖率统计，根据反馈对种子进行变异，从而提高代码覆盖。
-
 - [Intriguer: Field-Level Constraint Solving for Hybrid Fuzzing](https://dl.acm.org/doi/10.1145/3319535.3354249)：韩国延世大学发布在安全顶会 **CCS 2019** 上的一篇关于 fuzzer 性能改进的文章。该团队提出了一个基于 AFL，名为 [Intriguer](https://github.com/seclab-yonsei/intriguer) 的新型**混合 fuzzer**。通过污点分析和指令跟踪，经过笔者实践，该工具能够覆盖更深层次的代码路径。但是同时也存在 bug，会在 `/tmp` 目录下生成大量冗余文件。
-
 - [Unicorefuzz: On the Viability of Emulation for Kernelspace Fuzzing](https://www.usenix.org/system/files/woot19-paper_maier.pdf) ：柏林工业大学学者发表在安全顶会  **USENIX Security '19**  上的一篇关于 **fuzzing 内核**的文章。相对于 syzkaller， [unicorefuzz](https://github.com/fgsect/unicorefuzz) 配置更加简单，能够 fuzz 路径较深的一些函数。
 - [libFuzzer](http://llvm.org/docs/LibFuzzer.html) ：谷歌开发的一个基于覆盖引导的 fuzzer，主要针对库提供的**接口**进行 fuzzing。
 - [Honggfuzz](https://github.com/google/honggfuzz)：同样是谷歌开发的一个类似于 afl 的工具，只是 honggfuzz 基于反馈驱动，多线程和多进程，fuzz 速度相比于 afl 有一个质的飞跃。
@@ -151,7 +144,6 @@ The blog post contains classic fuzzing books, papers about fuzzing at informatio
 ### API/协议
 
 - [Sulley](https://github.com/OpenRCE/sulley)/[Boofuzz](https://github.com/jtpereyda/boofuzz)：Sulley 是一个模糊测试框架。主要用于协议的 fuzz，如今已经不再维护。 [Boofuzz](https://github.com/jtpereyda/boofuzz) 是古老的 [Sulley](https://github.com/OpenRCE/sulley) 模糊测试框架的分支和后续版本。除了大量错误修复外，boofuzz 扩展更多新特性。
-
 - [fuzzowski](https://github.com/nccgroup/fuzzowski)：基于 boofuzz 的网络协议模糊测试工具，基于 sulley 的数据变异。
 - [Peach](https://github.com/MozillaSecurity/peach)：Peach 是 Michael  团队开发的一个模糊测试框架，最初为开源软件，后续部分核心测试套**商用**发布。Peach 专注于文件格式的 fuzz，同时针对各种协议的 fuzz 也十分友好。
 - [Defensics](https://www.synopsys.com/software-integrity/security-testing/fuzz-testing.html)： Defensics 是一个基于变异的 fuzzing **商用**工具，简单而强大，广泛支持各种协议，具有成熟的测试套，也具有较强扩展性，用户可以通过模板创建属于自己的测试套。
@@ -162,9 +154,7 @@ The blog post contains classic fuzzing books, papers about fuzzing at informatio
 ### 固件
 
 - [IOTFUZZER: Discovering Memory Corruptions in IoT Through App-based Fuzzing](https://www.ndss-symposium.org/wp-content/uploads/2018/02/ndss2018_01A-1_Chen_paper.pdf)：香港大学  Jiongyi Chen  发表在 **NDSS 2018** 上的一篇关于固件 fuzzing 的文章，作者借助 IoT 设备的移动端 App 设计了一个黑盒模糊测试工具 [IOTFuzzer](https://github.com/zyw-200/IOTFuzzer_Full) 分析 IoT 设备上的内存错误漏洞。通过测试了 17 个不同的 IoT 设备，最终发现 15 个内存错误漏洞，其中包括了 8 个未知的漏洞。
-
 - [FIRM-AFL: High-Throughput Greybox Fuzzing of IoT Firmware via Augmented Process Emulation](https://www.usenix.org/conference/usenixsecurity19/presentation/zheng)：由中科院信工所 Yaowen Zheng 发表在 **USENIX Security '19** ， [FIRM-AFL](https://github.com/zyw-200/FirmAFL) 是第一个用于物联网固件的高质量灰盒模糊器，此工具的劣势在于只能 fuzz Firmadyne 能够正常模拟的固件。
-
 - [FIRMCORN: Vulnerability-Oriented Fuzzing of IoT Firmware via Optimized Virtual Execution](https://ieeexplore.ieee.org/document/8990098)：发表在  [IEEE Access](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6287639) 2020 年的期刊上，作为基于优化虚拟执行的 IoT 固件模糊测试框架 [FIRMCORN](https://github.com/FIRMCORN-Fuzzing/FIRMCORN)，作者声称是首次面向 IoT 固件的模糊测试框架。
 
 ## 4 Blogs
@@ -205,3 +195,11 @@ The blog post contains classic fuzzing books, papers about fuzzing at informatio
 其他
 
 - [基于 Unicorn 和 LibFuzzer 的模拟执行 fuzzing](http://galaxylab.com.cn/%e5%9f%ba%e4%ba%8eunicorn%e5%92%8clibfuzzer%e7%9a%84%e6%a8%a1%e6%8b%9f%e6%89%a7%e8%a1%8cfuzzing/) (2019)： 银河实验室对基于 unicorn 的模拟执行 fuzzing 技术进行了研究。在上次研究的基础上，进一步整合解决了部分问题，初步实现了基于 Unicorn 和 LibFuzzer 的模拟执行fuzzing 工具：[uniFuzzer](https://github.com/PAGalaxyLab/uniFuzzer)
+
+## Contribute
+
+如果你看到了认为比较好的有关模糊测试的资源，欢迎贡献本项目！请阅读[贡献指南](https://github.com/liyansong2018/fuzzing-tutorial/blob/main/CONTRIBUTING.md)。
+
+## License
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可。
