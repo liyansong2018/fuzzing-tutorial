@@ -1,10 +1,15 @@
 
 
 # Recent Papers/Blogs/Tools Related To Fuzzing
-> The blog post contains classic fuzzing books, papers about fuzzing at information security top conferences over the years, commonly used fuzzing tools, and blogs that can quickly learn fuzzing tools. → [English](https://github.com/liyansong2018/fuzzing-tutorial/blob/main/README_en.md)
+[<img src="logo/logo.png" align="right" width="30%">](https://github.com/liyansong2018/fuzzing-tutorial)
+
+> Curated list of classic fuzzing books, papers about fuzzing at information security top conferences over the years, commonly used fuzzing tools, and resources that can help us use fuzzer easily. → [English](https://github.com/liyansong2018/fuzzing-tutorial/blob/main/README_en.md)
 
 本项目收录了经典的 fuzzing 书籍、历年安全顶会上有关 fuzzing 的经典论文、常用的 fuzzing 工具、可以快速入手 fuzzing 工具的博客，如果你有更多资源，欢迎贡献。
 
+<br />
+
+<hr />
 ## Table of Contents
 
 - [1 Books](#1-Books)
@@ -196,6 +201,9 @@
 
 - [基于 Unicorn 和 LibFuzzer 的模拟执行 fuzzing](http://galaxylab.com.cn/%e5%9f%ba%e4%ba%8eunicorn%e5%92%8clibfuzzer%e7%9a%84%e6%a8%a1%e6%8b%9f%e6%89%a7%e8%a1%8cfuzzing/) (2019)： 银河实验室对基于 unicorn 的模拟执行 fuzzing 技术进行了研究。在上次研究的基础上，进一步整合解决了部分问题，初步实现了基于 Unicorn 和 LibFuzzer 的模拟执行fuzzing 工具：[uniFuzzer](https://github.com/PAGalaxyLab/uniFuzzer)
 
+<br />
+
+<hr />
 ## Contribute
 
 如果你看到了认为比较好的有关模糊测试的资源，欢迎贡献本项目！请阅读[贡献指南](https://github.com/liyansong2018/fuzzing-tutorial/blob/main/CONTRIBUTING.md)。
