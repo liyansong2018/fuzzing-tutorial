@@ -192,11 +192,11 @@
 -  [内核漏洞挖掘技术系列(2)——bochspwn](https://xz.aliyun.com/t/4800) 
 -  [内核漏洞挖掘技术系列(3)——bochspwn-reloaded(1)](https://xz.aliyun.com/t/4921)
 -  [内核漏洞挖掘技术系列(3)——bochspwn-reloaded(2)](https://xz.aliyun.com/t/4932) 
--  [内核漏洞挖掘技术系列(4)——syzkaller(1)](https://xz.aliyun.com/t/5079) 系列文章
--  [Syzkaller入门知识总结](https://www.freebuf.com/sectool/323886.html) (syzkaller 入门)
--  [从0开始Fuzzing之旅: 使用Syzkaller进行Linux驱动漏洞挖掘](https://www.freebuf.com/sectool/285699.html) (Android 模拟器内核)
--  [从0到1开始使用syzkaller进行Linux内核漏洞挖掘](https://bbs.pediy.com/thread-265405.htm) (Linux 内核)
--  [Fuzzing a Pixel 3a Kernel with Syzkaller](https://blog.senyuuri.info/2020/04/16/fuzzing-a-pixel-3a-kernel-with-syzkaller/) (Android 手机)
+-  [内核漏洞挖掘技术系列(4)——syzkaller(1)](https://xz.aliyun.com/t/5079) - syzkaller源码分析系列文章
+-  [Syzkaller入门知识总结](https://www.freebuf.com/sectool/323886.html) - syzkaller 入门
+-  [从0开始Fuzzing之旅: 使用Syzkaller进行Linux驱动漏洞挖掘](https://www.freebuf.com/sectool/285699.html) - Android 模拟器内核
+-  [从0到1开始使用syzkaller进行Linux内核漏洞挖掘](https://bbs.pediy.com/thread-265405.htm) - Linux 内核
+-  [Fuzzing a Pixel 3a Kernel with Syzkaller](https://blog.senyuuri.info/2020/04/16/fuzzing-a-pixel-3a-kernel-with-syzkaller/) - Android 手机
 
 其他
 
