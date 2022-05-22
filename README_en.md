@@ -25,8 +25,11 @@ This chapter contains top-level information security and classic papers in some 
 
 ### NDSS
 
+- [MobFuzz: Adaptive Multi-objective Optimization in Gray-box Fuzzing](https://www.ndss-symposium.org/ndss-paper/auto-draft-199/) (2022)
 - [FirmWire: Transparent Dynamic Analysis for Cellular Baseband Firmware](https://hernan.de/research/papers/firmwire-ndss22-hernandez.pdf) (2022)
 - [EMS: History-Driven Mutation for Coverage-based Fuzzing](https://nesa.zju.edu.cn/download/lcy_pdf_ems_ndss22.pdf) (2022)
+- [Context-Sensitive and Directional Concurrency Fuzzing for Data-Race Detection](https://www.ndss-symposium.org/ndss-paper/auto-draft-198/) (2022) 
+- [datAFLow: Towards a Data-Flow-Guided Fuzzer](https://www.ndss-symposium.org/ndss-paper/auto-draft-273/) (2022)
 - [Favocado: Fuzzing the Binding Code of JavaScript Engines Using Semantically Correct Test Cases](https://www.ndss-symposium.org/ndss-paper/favocado-fuzzing-the-binding-code-of-javascript-engines-using-semantically-correct-test-cases/) (2021)
 - [WINNIE : Fuzzing Windows Applications with Harness Synthesis and Fast Cloning, 2021](https://www.ndss-symposium.org/ndss-paper/winnie-fuzzing-windows-applications-with-harness-synthesis-and-fast-cloning/)
 - [PGFUZZ: Policy-Guided Fuzzing for Robotic Vehicles](https://www.ndss-symposium.org/ndss-paper/pgfuzz-policy-guided-fuzzing-for-robotic-vehicles/) (2021)
