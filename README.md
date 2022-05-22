@@ -1,6 +1,6 @@
 
 
-# Recent Papers/Blogs/Tools Related To Fuzzing
+# Recent Papers/Blogs/Tools Related to Fuzzing
 [<img src="logo/logo.png" align="right" width="30%">](https://github.com/liyansong2018/fuzzing-tutorial)
 
 > Curated list of classic fuzzing books, papers about fuzzing at information security top conferences over the years, commonly used fuzzing tools, and resources that can help us use fuzzer easily. → [English](https://github.com/liyansong2018/fuzzing-tutorial/blob/main/README_en.md)
@@ -8,7 +8,6 @@
 本项目收录了经典的 fuzzing 书籍、历年安全顶会上有关 fuzzing 的经典论文、常用的 fuzzing 工具、可以快速入手 fuzzing 工具的博客，如果你有更多资源，欢迎贡献。
 
 <hr />
-
 ## Table of Contents
 
 - [1 Books](#1-Books)
@@ -48,9 +47,12 @@
 
 ### NDSS
 
-- [MobFuzz: Adaptive Multi-objective Optimization in Gray-box Fuzzing] (2022) - ~~待研究~~ 国防科技大学
-- [FirmWire: Transparent Dynamic Analysis for Cellular Baseband Firmware](https://hernan.de/research/papers/firmwire-ndss22-hernandez.pdf) (2022) - 美国佛罗里达大学开发的工具 [FirmWire](https://github.com/FirmWire/FirmWire)，是一个支持三星和联发科的全系统**基带**固件分析平台。它支持对基带固件映像进行模糊测试、模拟和调试（~~该工具关注度较高，有待进一步研究~~）。
-- [EMS: History-Driven Mutation for Coverage-based Fuzzing](https://nesa.zju.edu.cn/download/lcy_pdf_ems_ndss22.pdf) (2022)- 浙江大学*吕晨阳*  提出的一种新颖的变异方案，通过分析历史测试用例，发现一些已经尝试过的用例仍有可能触发新的独特路径。提出了一种轻量级、高效的 Probabilistic Byte Orientation Model（PBOM）模型，基于此提出了一个新的历史驱动的变异框架 EMS，发现了多个新的 CVE（~~**该论文有待进一步研究**~~）。
+- [Semantic-Informed Driver Fuzzing Without Both the Hardware Devices and the Emulators](https://www.ndss-symposium.org/ndss-paper/auto-draft-248/) (2022): *西安交通大学* ，*赵文佳* 等人提出了一种无设备驱动程序模糊测试系统 DR .FUZZ，它不需要硬件设备对驱动程序进行 Fuzzing。DR .FUZZ 的核心是一种**语义通知机制**，它有效地生成输入以正确构造相关数据结构，以在驱动初始化时通过“验证链”，从而实现后续的无设备驱动程序模糊测试。 
+- [MobFuzz: Adaptive Multi-objective Optimization in Gray-box Fuzzing](https://www.ndss-symposium.org/ndss-paper/auto-draft-199/) (2022) : 国防科技大学  提出了一种用于多目标优化 (MOO) 的灰盒模糊器，称为 MobFuzz。
+- [FirmWire: Transparent Dynamic Analysis for Cellular Baseband Firmware](https://hernan.de/research/papers/firmwire-ndss22-hernandez.pdf) (2022) : 美国佛罗里达大学开发的工具 [FirmWire](https://github.com/FirmWire/FirmWire)，是一个支持三星和联发科的全系统**基带**固件分析平台。它支持对基带固件映像进行模糊测试、模拟和调试。
+- [EMS: History-Driven Mutation for Coverage-based Fuzzing](https://nesa.zju.edu.cn/download/lcy_pdf_ems_ndss22.pdf) (2022): 浙江大学*吕晨阳*  提出的一种新颖的变异方案，通过分析历史测试用例，发现一些已经尝试过的用例仍有可能触发新的独特路径。提出了一种轻量级、高效的 Probabilistic Byte Orientation Model（PBOM）模型，基于此提出了一个新的历史驱动的变异框架 EMS，发现了多个新的 CVE。
+- [Context-Sensitive and Directional Concurrency Fuzzing for Data-Race Detection](https://www.ndss-symposium.org/ndss-paper/auto-draft-198/) (2022) : 清华大学相关团队 开发了一个名为 CONZZER 的新型并发模糊测试框架，以有效地探索线程交错并检测难以发现的**数据竞争**。
+- [datAFLow: Towards a Data-Flow-Guided Fuzzer](https://www.ndss-symposium.org/ndss-paper/auto-draft-273/) (2022):  *澳大利亚国立大学*  开发的 DATAFLOW，这是一个由轻量级数据流分析驱动的灰盒模糊器。
 - [Favocado: Fuzzing the Binding Code of JavaScript Engines Using Semantically Correct Test Cases, 2021](https://www.ndss-symposium.org/ndss-paper/favocado-fuzzing-the-binding-code-of-javascript-engines-using-semantically-correct-test-cases/)：美国亚利桑那州立大学师生提出一种对 **JS 引擎**中绑定层代码进行 fuzzing 的工具：[Favocado](https://github.com/favocado/Favocado)。作者在对在4个不同的JavaScript运行时系统fuzz时，发现了61个新的bug，其中33个是安全漏洞，13个已经被CVE收录。
 - [WINNIE : Fuzzing Windows Applications with Harness Synthesis and Fast Cloning, 2021](https://www.ndss-symposium.org/ndss-paper/winnie-fuzzing-windows-applications-with-harness-synthesis-and-fast-cloning/)： 利用合成和快速克隆对 **Windows 应用程序**进行模糊测试 ， *佐治亚理工学院* 的作者构建了一个端到端 [WINNIE](https://github.com/sslab-gatech/winnie) 系统，包含两个组件：可从二进制文件中自动合成工具的生成器，以及一个高效的 Windows forkserver。 对比工具： WinAFL 。
 - [PGFUZZ: Policy-Guided Fuzzing for Robotic Vehicles, 2021](https://www.ndss-symposium.org/ndss-paper/pgfuzz-policy-guided-fuzzing-for-robotic-vehicles/)：普度大学 *Hyungsub Kim* 等人设计的一个针对机器车辆（ Robotic vehicles, RVs）fuzzing 工具，即 [PGFUZZ](https://github.com/purseclab/PGFUZZ)，应用场景较为有限。
@@ -207,7 +209,6 @@
 
 <br />
 <hr />
-
 ## Contribute
 
 如果你看到了认为比较好的有关模糊测试的资源，欢迎贡献本项目！请阅读[贡献指南](https://github.com/liyansong2018/fuzzing-tutorial/blob/main/CONTRIBUTING.md)。
