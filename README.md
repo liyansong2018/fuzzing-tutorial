@@ -91,7 +91,11 @@
 
 ### IEEE S&P
 
-- [BEACON: Directed Grey-Box Fuzzing with Provable Path Pruning, 2022](https://qingkaishi.github.io/public_pdfs/SP22.pdf)：香港科技大学 Heqing Huang 等人实现的一种称之为  BEACON 的**定向模糊测试**。这是基于 LLVM 灰盒 Fuzzer，需要将输入源代码编译为 LLVM 位代码，进行静态分析。分析后插桩，LLVM 位代码被编译为可执行二进制文件，可以与各种模糊引擎集成。未见开源。
+- [JIGSAW: Efficient and Scalable Path Constraints Fuzzing, 2022](https://www.cs.ucr.edu/~heng/pubs/jigsaw_sp22.pdf) -  将路径约束编译为本地函数，提高分支翻转率的 fuzzer，来自于美国加州大学 Ju Chen，工具已开源 [JIGSAW](https://github.com/R-Fuzz/jigsaw)。
+- [PATA: Fuzzing with Path Aware Taint Analysis, 2022](http://www.wingtecher.com/themes/WingTecherResearch/assets/papers/sp22.pdf) -  清华大学软件学院软件系统安全保障小组， 这篇论文主要讨论了在 fuzzing 中**路径感知的污点分析技术**（path-aware taint analysis）的应用。
+- [FuzzUSB: Hybrid Stateful Fuzzing of USB Gadget Stacks, 2022](https://ieeexplore.ieee.org/document/9833593) -  混合fuzzing技术在USB上的应用，来自于美国普林斯顿大学的 [Kyungtae Kim](https://ieeexplore.ieee.org/author/37087006508) 。
+- [Effective Seed Scheduling for Fuzzing with Graph Centrality Analysis, 2022](https://arxiv.org/abs/2203.12064) - 美国哥伦比亚大学，Dongdong She 等人使用图论中心性分析进行模糊测试的有效种子调度，此方案被称为 [K-Scheduler](https://github.com/Dongdongshe/K-Scheduler)，已开源。
+- [BEACON: Directed Grey-Box Fuzzing with Provable Path Pruning, 2022](https://qingkaishi.github.io/public_pdfs/SP22.pdf) - 香港科技大学 Heqing Huang 等人实现的一种称之为 BEACON 的**定向模糊测试**。这是基于 LLVM 灰盒 Fuzzer，需要将输入源代码编译为 LLVM 位代码，进行静态分析。分析后插桩，LLVM 位代码被编译为可执行二进制文件，可以与各种模糊引擎集成。未见开源。
 - [DiFuzzRTL: Differential Fuzz Testing to Find CPU Bugs, 2021](https://ieeexplore.ieee.org/document/9519470)：韩国首尔大学，[DifuzzRTL](https://github.com/compsec-snu/difuzz-rtl)，一种专门发现 CPU RTL 漏洞的 fuzz 工具，已开源。
 - [StochFuzz: Sound and Cost-effective Fuzzing of Stripped Binaries by Incremental and Stochastic Rewriting, 2021](https://ieeexplore.ieee.org/document/9519407)： 普渡大学及中国人民大学的华人团队开发了一种新的 fuzz 技术，被称为  incremental and stochastic rewriting ，优于 afl-unicorn，利用更低的开销，提高了**黑盒二进制 fuzzing** 的效率，相关工具已开源：[ZhangZhuoSJTU](https://github.com/ZhangZhuoSJTU)/**[StochFuzz](https://github.com/ZhangZhuoSJTU/StochFuzz)**。
 - [NtFuzz: Enabling Type-Aware Kernel Fuzzing on Windows with Static Binary Analysis, 2021](https://ieeexplore.ieee.org/document/9519448)： 韩国科学技术院 (KAIST)  Jaeseung Cho 等人提出的一个静态二进制分析器，可以自动推断出 Windows 系统调用，该分析器被整合到 [SoftSec-KAIST](https://github.com/SoftSec-KAIST)/**[NTFuzz](https://github.com/SoftSec-KAIST/NTFuzz)**，一个 **Windows 系统调用** fuzzing 框架，首次将静态二进制分析技术与 Windows 内核的 fuzzing 技术相结合。
