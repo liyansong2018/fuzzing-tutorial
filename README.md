@@ -3,7 +3,7 @@
 # Recent Papers/Blogs/Tools Related to Fuzzing
 [<img src="logo/logo.png" align="right" width="30%">](https://github.com/liyansong2018/fuzzing-tutorial)
 
-> Curated list of classic fuzzing books, papers about fuzzing at information security top conferences over the years, commonly used fuzzing tools, and resources that can help us use fuzzer easily. → [English](https://github.com/liyansong2018/fuzzing-tutorial/blob/main/README_en.md)
+> Curated list of classic fuzzing books, papers about fuzzing at information security top conferences over the years, commonly used fuzzing tools, and resources that can help us use fuzzer easily. → [English](https://liyansong2018.github.io/fuzzing-tutorial/README_en)
 
 本项目收录了经典的 fuzzing 书籍、历年安全顶会上有关 fuzzing 的经典论文、常用的 fuzzing 工具、可以快速入手 fuzzing 工具的博客，如果你有更多资源，欢迎贡献。
 
@@ -214,7 +214,7 @@
 
 ### 固件
 
-- [Automatic Firmware Emulation through Invalidity-guided Knowledge Inference | USENIX, 2021](https://www.usenix.org/conference/usenixsecurity21/presentation/zhou) - 华中科技大学周威老师团队开发的 μEmu，使用**符号执行**获取**模拟固件映像**所需信息。已开源 [μEmu](https://github.com/MCUSec/uEmu)。
+- [Automatic Firmware Emulation through Invalidity-guided Knowledge Inference, 2021](https://www.usenix.org/conference/usenixsecurity21/presentation/zhou) - 华中科技大学周威老师团队开发的 μEmu，使用**符号执行**获取**模拟固件映像**所需信息。已开源 [μEmu](https://github.com/MCUSec/uEmu)。
 - [IOTFUZZER: Discovering Memory Corruptions in IoT Through App-based Fuzzing](https://www.ndss-symposium.org/wp-content/uploads/2018/02/ndss2018_01A-1_Chen_paper.pdf)：香港大学  Jiongyi Chen  发表在 **NDSS 2018** 上的一篇关于固件 fuzzing 的文章，作者借助 IoT 设备的移动端 App 设计了一个黑盒模糊测试工具 [IOTFuzzer](https://github.com/zyw-200/IOTFuzzer_Full) 分析 IoT 设备上的内存错误漏洞。通过测试了 17 个不同的 IoT 设备，最终发现 15 个内存错误漏洞，其中包括了 8 个未知的漏洞。
 - [FIRM-AFL: High-Throughput Greybox Fuzzing of IoT Firmware via Augmented Process Emulation](https://www.usenix.org/conference/usenixsecurity19/presentation/zheng)：由中科院信工所 Yaowen Zheng 发表在 **USENIX Security '19** ， [FIRM-AFL](https://github.com/zyw-200/FirmAFL) 是第一个用于物联网固件的高质量灰盒模糊器，此工具的劣势在于只能 fuzz Firmadyne 能够正常模拟的固件。
 - [FIRMCORN: Vulnerability-Oriented Fuzzing of IoT Firmware via Optimized Virtual Execution](https://ieeexplore.ieee.org/document/8990098)：发表在  [IEEE Access](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6287639) 2020 年的期刊上，作为基于优化虚拟执行的 IoT 固件模糊测试框架 [FIRMCORN](https://github.com/FIRMCORN-Fuzzing/FIRMCORN)，作者声称是首次面向 IoT 固件的模糊测试框架。

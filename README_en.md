@@ -63,7 +63,7 @@ This chapter contains top-level information security and classic papers in some 
 - [FIXREVERTER: A Realistic Bug Injection Methodology for Benchmarking Fuzz Testing, 2022](https://www.usenix.org/conference/usenixsecurity22/presentation/zhang-zenong)
 - [StateFuzz: System Call-Based State-Aware Linux Driver Fuzzing, 2022](StateFuzz: System Call-Based State-Aware Linux Driver Fuzzing)
 - [SyzScope: Revealing High-Risk Security Impacts of Fuzzer-Exposed Bugs inLinux kernel, 2022](https://www.usenix.org/system/files/sec22summer_zou.pdf)
-- [Automatic Firmware Emulation through Invalidity-guided Knowledge Inference | USENIX, 2021](https://www.usenix.org/conference/usenixsecurity21/presentation/zhou)
+- [Automatic Firmware Emulation through Invalidity-guided Knowledge Inference, 2021](https://www.usenix.org/conference/usenixsecurity21/presentation/zhou)
 - [Constraint-guided Directed Greybox Fuzzing, 2021](https://www.usenix.org/conference/usenixsecurity21/presentation/lee-gwangmu)
 - [UNIFUZZ: A Holistic and Pragmatic Metrics-Driven Platform for Evaluating Fuzzers, 2021](https://www.usenix.org/biblio-6129)
 - [Nyx: Greybox Hypervisor Fuzzing using Fast Snapshots and Affine Types, 2021](https://www.usenix.org/conference/usenixsecurity21/presentation/schumilo)
@@ -111,9 +111,7 @@ This chapter contains top-level information security and classic papers in some 
 
 - [SFuzz: Slice-based Fuzzing for Real-Time Operating Systems, 2022](https://dl.acm.org/doi/10.1145/3548606.3559367)
 - [LibAFL: A Framework to Build Modular and Reusable Fuzzers, 2022](https://dl.acm.org/doi/10.1145/3548606.3560602)
-
 - [JIT-Picking: Differential Fuzzing of JavaScript Engines, 2022](https://dl.acm.org/doi/10.1145/3548606.3560624)
-
 - [MC2: Rigorous and Efficient Directed Greybox Fuzzing, 2022](https://dl.acm.org/doi/10.1145/3548606.3560648)
 - [Favocado: Fuzzing the Binding Code of JavaScript Engines Using Semantically Correct Test Cases, 2021](https://www.ndss-symposium.org/ndss-paper/favocado-fuzzing-the-binding-code-of-javascript-engines-using-semantically-correct-test-cases/)
 - [WINNIE : Fuzzing Windows Applications with Harness Synthesis and Fast Cloning, 2021](https://www.ndss-symposium.org/ndss-paper/winnie-fuzzing-windows-applications-with-harness-synthesis-and-fast-cloning/)
