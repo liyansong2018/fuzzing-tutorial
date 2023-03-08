@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Recent Papers/Blogs/Tools Related to Fuzzing
 
 The blog post contains classic fuzzing books, papers about fuzzing at information security top conferences over the years, commonly used fuzzing tools, and blogs that can quickly learn fuzzing tools.
