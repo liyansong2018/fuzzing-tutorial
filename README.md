@@ -78,6 +78,16 @@
 
 ### USENIX Security
 
+#### 2023
+
+- [Fuzztruction: Using Fault Injection-based Fuzzing to Leverage Implicit Domain Knowledge, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/bars) -  *波鸿鲁尔大学*  Nils Bars，提出一种新颖的模糊测试方案，不是变异种子，而是根据源码中的编码含义，变异数据生成器，甚至是注入错误，绕过一些判断，以便输入的用例几乎是预期的格式。这样的数据绕过了初始解析。[工具原型已开源](https://github.com/fuzztruction/fuzztruction)，提供了 Docker 虚拟机环境，10G+，感兴趣的同学如果想尝试此工具，请注意预留足够的磁盘空间。
+- [DynSQL: Stateful Fuzzing for Database Management Systems with Complex and Valid SQL Query Generation, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/jiang-zu-ming) -  *苏黎世联邦理工学院*  Zu-Ming Jiang，一个完全自动化的模糊测试框架 DynSQL，用于测试各种 DBMS 数据库管理系统。
+- [FuzzJIT: Oracle-Enhanced Fuzzing for JavaScript Engine JIT Compiler, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/wang-junjie) -  *天津大学*  Junjie Wang，针对 Javascript 引擎的 JIT 编译器的模糊测试工具。[FuzzJIT](https://github.com/SpaceNaN/fuzzjit)，已开源。
+- [GLeeFuzz: Fuzzing WebGL Through Error Message Guided Mutation, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/peng) -  *普渡大学*  Hui Peng，WebGL 是一组用于 GPU 加速图形的标准化 JavaScript API，通过分析 Chrome 的 WebGL 实现以识别发出错误的语句之间的依赖关系和被拒绝的输入部分，并使用此信息来指导输入变异，这就是 [GLeeFuzz](https://github.com/HexHive/GLeeFuzz)，已开源。
+- [Automata-Guided Control-Flow-Sensitive Fuzz Driver Generation, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/zhang-cen) -  *南洋理工大学*  Cen Zhang，提出了 RUBICK，这是一种自动引导的控制流敏感模糊驱动程序，公开资料较少，论文还未正式发布。
+- [PolyFuzz: Holistic Greybox Fuzzing of Multi-Language Systems, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/li-wen) -  *华盛顿州立大学*  Wen Li，[POLYFUZZ](https://github.com/Daybreak2019/PolyFuzz)，已开源，这是一种灰盒模糊器，它通过跨语言覆盖反馈和跨语言（不同片段）程序输入和分支谓词之间的语义关系的显式建模，对给定的多语言系统进行整体模糊。POLYFUZZ 是可扩展的，支持以不同语言组合编写的多语言代码，例如 C、Python、Java。
+- [AIFORE: Smart Fuzzing Based on Automatic Input Format Reverse Engineering, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/shi-ji) -  *中国科学院信息工程研究所*  Ji Shi，自动输入格式逆向工程代表了一种有吸引力但具有挑战性的学习格式的方法，而本文就是为了解决程序的输入格式，提出的一种名为 AIFORE 模糊测试解决方案，通过对输入格式的逆向，结合神经网络模型学习，推断程序输入格式。
+
 #### 2022
 
 - [MundoFuzz: Hypervisor Fuzzing with Statistical Coverage Testing and Grammar Inference, 2022](https://www.usenix.org/conference/usenixsecurity22/presentation/myung) -  针对 Hypervisor 的模糊测试工具 MundoFuzz，来自于韩国*首尔国立大学* 的 Cheolwoo Myung 等人。
