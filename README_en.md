@@ -56,6 +56,17 @@ This chapter contains top-level information security and classic papers in some 
 - [Automata-Guided Control-Flow-Sensitive Fuzz Driver Generation, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/zhang-cen)
 - [PolyFuzz: Holistic Greybox Fuzzing of Multi-Language Systems, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/li-wen)
 - [AIFORE: Smart Fuzzing Based on Automatic Input Format Reverse Engineering, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/shi-ji)
+- [Remote Code Execution from SSTI in the Sandbox: Automatically Detecting and Exploiting Template Escape Bugs, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/zhao-yudi)
+- [MTSan: A Feasible and Practical Memory Sanitizer for Fuzzing COTS Binaries, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/chen-xingman)
+- [MorFuzz: Fuzzing Processor via Runtime Instruction Morphing enhanced Synchronizable Co-simulation, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/xu-jinyan)
+- [MINER: A Hybrid Data-Driven Approach for REST API Fuzzing, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/lyu)
+- [KextFuzz: Fuzzing macOS Kernel EXTensions on Apple Silicon via Exploiting Mitigations, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/yin)
+- [Intender: Fuzzing Intent-Based Networking with Intent-State Transition Guidance, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/kim-jiwon)
+- [DDRace: Finding Concurrency UAF Vulnerabilities in Linux Drivers with Directed Fuzzing, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/yuan-ming)
+- [CarpetFuzz: Automatic Program Option Constraint Extraction from Documentation for Fuzzing, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/wang-dawei)
+- [BoKASAN: Binary-only Kernel Address Sanitizer for Effective Kernel Fuzzing, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/cho)
+- [Bleem: Packet Sequence Oriented Fuzzing for Protocol Implementations, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/luo-zhengxiong)
+- [autofz: Automated Fuzzer Composition at Runtime, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/fu-yu-fu)
 - [MundoFuzz: Hypervisor Fuzzing with Statistical Coverage Testing and Grammar Inference, 2022](https://www.usenix.org/conference/usenixsecurity22/presentation/myung)
 - [TheHuzz: Instruction Fuzzing of Processors Using Golden-Reference Models for Finding Software-Exploitable Vulnerabilities, 2022](https://arxiv.org/abs/2201.09941)
 - [Morphuzz: Bending (Input) Space to Fuzz Virtual Devices, 2022](https://www.usenix.org/conference/usenixsecurity22/presentation/bulekov)
@@ -170,6 +181,7 @@ Common and practical tools are included here, most of which have been practiced 
 
 ### Firmware
 
+- [Forming Faster Firmware Fuzzers, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/seidel)
 - [FirmSolo: Enabling dynamic analysis of binary Linux-based IoT kernel modules, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/angelakopoulos)
 - [Fuzzware: Using Precise MMIO Modeling for Effective Firmware Fuzzing, 2022](https://www.usenix.org/conference/usenixsecurity22/presentation/scharnowski)
 - [Automatic Firmware Emulation through Invalidity-guided Knowledge Inference, 2021](https://www.usenix.org/conference/usenixsecurity21/presentation/zhou)
