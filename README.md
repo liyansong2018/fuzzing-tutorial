@@ -235,7 +235,7 @@
 
 ### 固件
 
-- [Forming Faster Firmware Fuzzers, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/seidel) - *柏林工业大学* Lukas Seidel 提出的一种近乎本机的重新托管，而不是模拟。一种针对 **ARM Cortex-M MCU** 固件进行 Fuzz 的工具，[SAFIREFUZZ](https://github.com/pr0me/SAFIREFUZZ) 已开源。
+- [Forming Faster Firmware Fuzzers, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/seidel) - *柏林工业大学* Lukas Seidel 提出一种针对 **ARM Cortex-M MCU** 固件进行 Fuzz 的工具，[SAFIREFUZZ](https://github.com/pr0me/SAFIREFUZZ) 已开源，论文总结了过去的 MCU Fuzz 类型，并展现 SAFIREFUZZ 与众不同的地方：SAFIREFUZZ 运行在与目标固件架构相同的操作系统上（例如树莓派），节省了以前的工具使用 QEMU TCG 带来的性能损失，且不需要使用 softmmu，显著提升模糊测试效率。
 - [FirmSolo: Enabling dynamic analysis of binary Linux-based IoT kernel modules, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/angelakopoulos) - *波士顿大学* Ioannis Angelakopoulos 工程师介绍的另外一种 IoT 固件模糊测试解决方案 FirmSolo。以经典的 Firmadyne 为例，传统固件模拟工具专注于用户空间的仿真和测试。而 FirmSole 可以提取固件的内核模块元信息，生成一个可以由 Qemu 加载的新内核，进而可以对这些内核模块进行模糊测试，已开源 [FirmSole ](https://github.com/BUseclab/FirmSolo)。
 - [Fuzzware: Using Precise MMIO Modeling for Effective Firmware Fuzzing, 2022](https://www.usenix.org/conference/usenixsecurity22/presentation/scharnowski) -  使用精准的 MMIO 建模提高固件模糊测试效率，来自于*波鸿鲁尔大学* 。一种针对 **ARM Cortex-M MCU 固件**进行 Fuzz 的工具，使用 **Unicore Engine** 仿真，MMIO 寄存器作为 Fuzz 入口，已开源 [Fuzzware](https://github.com/fuzzware-fuzzer/fuzzware)。 
 - [Automatic Firmware Emulation through Invalidity-guided Knowledge Inference, 2021](https://www.usenix.org/conference/usenixsecurity21/presentation/zhou) - 华中科技大学周威老师团队开发的 μEmu，使用**符号执行**获取**模拟固件映像**所需信息，支持 **ARM Cortex-M MCU 固件**，基于 **S2E**（符号执行平台）设计和开发的，已开源 [μEmu](https://github.com/MCUSec/uEmu)。
