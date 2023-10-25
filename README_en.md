@@ -102,6 +102,16 @@ This chapter contains top-level information security and classic papers in some 
 
 ### IEEE S&P
 
+- [DEVFUZZ: Automatic Device Model-Guided Device Driver Fuzzing, 2023](https://www.computer.org/csdl/pds/api/csdl/proceedings/download-article/1Nrc0AgBCgM/pdf)
+- [ODDFUZZ: Discovering Java Deserialization Vulnerabilities via Structure-Aware Directed Greybox Fuzzing, 2023](https://arxiv.org/abs/2304.04233)
+- [Finding Specification Blind Spots via Fuzz Testing, 2023](https://cs.uwaterloo.ca/~m285xu/assets/publication/fast-paper.pdf)
+- [RSFuzzer: Discovering Deep SMI Handler Vulnerabilities in UEFI Firmware with Hybrid Fuzzing, 2023](https://www.computer.org/csdl/pds/api/csdl/proceedings/download-article/1Js0Ek1SE6c/pdf)
+- [SegFuzz: Segmentizing Thread Interleaving to Discover Kernel Concurrency Bugs through Fuzzing, 2023](https://www.computer.org/csdl/pds/api/csdl/proceedings/download-article/1NrbZrWlldK/pdf)
+- [SelectFuzz: Efficient Directed Fuzzing with Selective Path Exploration, 2023](https://www.computer.org/csdl/pds/api/csdl/proceedings/download-article/1Js0DBwgpwY/pdf)
+- [TEEzz: Fuzzing Trusted Applications on COTS Android Devices, 2023](https://www.computer.org/csdl/pds/api/csdl/proceedings/download-article/1He7XWu6nJe/pdf)
+- [UTOPIA: Automatic Generation of Fuzz Driver using Unit Tests, 2023](https://www.computer.org/csdl/pds/api/csdl/proceedings/download-article/1He7YBzoF0c/pdf)
+- [VIDEZZO: Dependency-aware Virtual Device Fuzzing, 2023](https://www.computer.org/csdl/pds/api/csdl/proceedings/download-article/1Nrc0ztdpDy/pdf)
+- [Toss a Fault to Your Witcher: Applying Grey-box Coverage-Guided Mutational Fuzzing to Detect SQL and Command Injection Vulnerabilities, 2023](https://www.computer.org/csdl/proceedings-article/sp/2023/933600a116/1He7XPiaynS)
 - [JIGSAW: Efficient and Scalable Path Constraints Fuzzing, 2022](https://www.cs.ucr.edu/~heng/pubs/jigsaw_sp22.pdf)
 - [PATA: Fuzzing with Path Aware Taint Analysis, 2022](http://www.wingtecher.com/themes/WingTecherResearch/assets/papers/sp22.pdf)
 - [FuzzUSB: Hybrid Stateful Fuzzing of USB Gadget Stacks, 2022](https://ieeexplore.ieee.org/document/9833593)
