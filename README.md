@@ -203,6 +203,20 @@
 
 ### ACM CCS
 
+#### 2023
+
+- [DSFuzz: Detecting Deep State Bugs with Dependent State Exploration, 2023](https://dl.acm.org/doi/10.1145/3576915.3616594):  基于深度学习研究状态机与代码路径的关系，简言之就是一个针对状态机建模，以提高代码覆盖率，接近千禧年出生的华人[Yinxi Liu]([Yinxi Liu](https://yinxi.site/))。
+- [Fuzz on the Beach: Fuzzing Solana Smart Contracts, 2023](https://arxiv.org/abs/2309.03006):  Solana 是一种构建数字货币，如分布式工具的平台，而本文就是对这个平台诞生的智能合约的 Fuzz，来自德国的杜伊斯堡-埃森大学。
+- [Greybox Fuzzing of Distributed Systems, 2023](https://mengrj.github.io/files/CCS23.pdf):  针对分布式系统（如 Redis）的灰盒 Fuzz 工具，[已开源](https://github.com/dsfuzz/mallory)，环境使用 Docker，可以自己构建，Jepsen + Mallory，新加坡国立大学 Ruijie Meng。
+- [HOPPER: Interpretative Fuzzing for Libraries, 2023](https://dl.acm.org/doi/10.1145/3576915.3616610):  一项比较有意思的研究，一种新的 API Fuzz 工具，不需要像开发那样对 API 的用法了如指掌，而只需要知道 Hopper 如何使用。目前的局限性是只针对 C 而非 C++ 语言编写的库，[Hopper 开源地址](https://github.com/FuzzAnything/Hopper)，[腾讯安全大数据实验室](http://www.baidu.com/link?url=aWqSg8WuLS7zTXIhjBtwYRtDkRYa9FBRmZWPvPgPJ6x5cZJO7SHTqM_YAqot7DF1LdMA6fwn0IJGpbWxnGHsfglRNqwnqNY5tH1I_LyyH0Gt78Po_-Jbb0O2e0dXJH7pyLfzX4YfzOgNJNNEcFS6AbdYK4AP_wRnMMHAXgZiv9zHGFa84udhi8xZfIY5pvkJnOP3Wi7-uzNkugatATRZ6K)。
+- [Profile-guided System Optimizations for Accelerated Greybox Fuzzing, 2023](https://dl.acm.org/doi/10.1145/3576915.3616636):  优化 AFL 的持久模式和 Fork 系统调用，提升 Fuzz 效率，美国犹他大学，改进后的 [AFL/AFL++ 分支代码](AFL/AFL++ 分支代码)。
+- [NestFuzz: Enhancing Fuzzing with Comprehensive Understanding of Input Processing Logic, 2023](https://dl.acm.org/doi/10.1145/3576915.3623103):  复旦大学系统软件与安全实验室研究成果，专门针对开源工具进行 Fuzz 的工具 [NestFuzz](https://github.com/fdu-sec/NestFuzz)，仍然是基于 AFL 改进的工具，提出了一种新颖的数据结构，即输入处理树，它可以表示输入格式的整体结构。在模糊测试的第二阶段，NestFuzz 设计了一种级联依赖性感知突变策略。基于已识别的依赖关系，每当 NestFuzz 改变（字段或结构级别）输入时，它都会级联改变其他受影响的字段或子结构以维持结构有效性。
+- [SyzDirect: Directed Greybox Fuzzing for Linux Kernel, 2023](https://dl.acm.org/doi/10.1145/3576915.3623146):  仍然是来自于复旦大学系统软件与安全实验室，好在他们的工具都已开源：[SyzDirect](https://github.com/seclab-fudan/SyzDirect)，基于 Syzkaller 的改进。
+- [PyRTFuzz: Detecting Bugs in Python Runtimes via Two-Level Collaborative Fuzzing, 2023](https://dl.acm.org/doi/10.1145/3576915.3623166):  顾名思义，就是一个用于检测 Python 运行时中的错误的模糊测试工具。它采用了两级模糊的方法，即单元测试级别的模糊和运行时级别的模糊，[PyRTFuzz 已开源](https://github.com/awen-li/PyRTFuzz)，[作者简介](https://awen-li.github.io/)。
+- [Poster: Combining Fuzzing with Concolic Execution for IoT Firmware Testing, 2023](https://dl.acm.org/doi/10.1145/3576915.3624373)：又是一个针对 IoT 固件的 Fuzz 工具。在以前固件模糊测试的基础上结合了符号执行。但是其限制仍然是目标固件要支持全系统仿真。因此，本篇论文仍然没有解决固件 Fuzz 测试的核心问题，即仿真，作者来自于韩国世宗大学。
+
+#### 2022 ⤵ 
+
 - [SFuzz: Slice-based Fuzzing for Real-Time Operating Systems, 2022](https://dl.acm.org/doi/10.1145/3548606.3559367):  基于切片的新型模糊器 SFuzz，用于检测 RTOS 中的安全漏洞，来自上海交通大学。
 - [LibAFL: A Framework to Build Modular and Reusable Fuzzers, 2022](https://dl.acm.org/doi/10.1145/3548606.3560602):   **LibAFL**，这是一个构建模块化和可重用模糊器的框架，来自于谷歌的个人研究者，已开源 **[LibAFL](https://github.com/AFLplusplus/LibAFL)**。
 - [JIT-Picking: Differential Fuzzing of JavaScript Engines, 2022](https://dl.acm.org/doi/10.1145/3548606.3560624): JavaScript 引擎的模糊测试，来自德国 *波鸿鲁尔大学*。
