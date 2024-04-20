@@ -154,6 +154,19 @@
 
 ### IEEE S&P
 
+#### 2024
+
+- [AFGen: Whole-Function Fuzzing for Applications and Libraries, 2024](https://www.computer.org/csdl/proceedings-article/sp/2024/313000a011/1RjE9PjiDss) - AFGen（全函数模糊测试应用和库）是一种用于应用程序和库的全函数模糊测试工具。它是一种基于符号执行的模糊测试技术，通过符号执行进行静态分析，[代码即将开源](https://github.com/Marsman1996/AFGen)，作者来自于中国科学院大学的[刘雨薇](https://www.computer.org/csdl/search/default?type=author&givenName=Yuwei&surname=Liu)。
+- [Chronos: Finding Timeout Bugs in Practical Distributed Systems by Deep-Priority Fuzzing with Transient Delay, 2024](https://www.computer.org/csdl/proceedings-article/sp/2024/313000a109/1Ub23heRtUA) - Chronos的目标是提供一个实用的工具，帮助开发者发现并解决分布式系统中的超时错误。通过深度优先模糊测试和瞬时延迟模拟，与上面一篇论文一样，感觉较为学术化，作者来自清华大学的[Yuanliang Chen](https://www.computer.org/csdl/search/default?type=author&givenName=Yuanliang&surname=Chen)。
+- [DY Fuzzing: Formal Dolev-Yao Models Meet Cryptographic Protocol Fuzz Testing, 2024](https://www.computer.org/csdl/proceedings-article/sp/2024/313000a096/1Ub234bjuWA) - 一个针对密码学算法库进行模糊测试的模型，如针对 OpenSSL/wolfSSL，作者为独立研究员[Max Ammann](https://www.computer.org/csdl/search/default?type=author&givenName=Max&surname=Ammann)，已经有基于 DY 模型实现了 **TLS Fuzz** 的工具，[tlspuffin](https://github.com/tlspuffin/tlspuffin)。
+- [LABRADOR: Response Guided Directed Fuzzing for Black-box IoT Devices, 2024](https://www.computer.org/csdl/proceedings-article/sp/2024/313000a127/1Ub23HQTJ1C) - 又是一个针对固件黑盒 Fuzz 的工具，来自于信息工程大学的[Hangtian Liu](https://www.computer.org/csdl/search/default?type=author&givenName=Hangtian&surname=Liu)，也是张超团队的工作。相比 SNIPUZZ、BOOFUZZ 和 FIRM-AFL 能够发现更多的漏洞，同时是 SaTC 发现的漏洞的 8.57 倍。与以前工作不同的是，**LABRADOR 似乎不需要进行固件仿真**，而是在真机上进行 Fuzz 测试，通过网络响应来推断固件的执行跟踪，并推导出测试的代码覆盖率，未见开源。
+- [Predecessor-aware Directed Greybox Fuzzing, 2024](https://www.computer.org/csdl/proceedings-article/sp/2024/313000a040/1RjEaeMELbq) - 属于定向模糊测试的范畴，提出了一种 Predecessor-aware Directed Greybox Fuzzing (PDGF) 方法，并将 DGF 视为一种路径搜索问题，是一种结合了先前路径感知的灰盒模糊测试技术，较为学术。
+- [SATURN: Host-Gadget Synergistic USB Driver Fuzzing, 2024](https://www.computer.org/csdl/proceedings-article/sp/2024/313000a051/1RjEaqzRsfC) - 针对 USB 协议的 Fuzz 工具，来自清华大学[Yiru Xu](https://www.computer.org/csdl/search/default?type=author&givenName=Yiru&surname=Xu)。工具已开源：[Saturn](https://github.com/THU-WingTecher/Saturn)。
+- [SoK: Prudent Evaluation Practices for Fuzzing, 2024](https://www.computer.org/csdl/proceedings-article/sp/2024/313000a137/1Ub23V26Svm) - 一篇来自*德国CISPA亥姆霍兹信息安全中心*的有趣论文。在 2018~2023 年安全顶会公开发表的 289 篇有关 Fuzzing 的论文中，74% 的论文公开了源码，60% 的论文工程代码受到了评估，**各项 Fuzzing 研究论文发现的 CVE 的数量和质量存疑**，并表达观点，CVE 不是主要影响 Fuzzer 质量的标准。作者对其中的 8 篇进行深入评估，**并对这些论文的研究结果提出质疑**。让人遗憾的是，这 8 篇数据有问题的论文均来自国内。包括 *深圳大学、中国科学院大学、上海交大、奇安信&天津大学，国防科大、华盛顿州立大学（留学生）、中科学信工所、中国科学院大学国家计算机网络入侵防护中心*。
+- [SyzTrust: State-aware Fuzzing on Trusted OS Designed for IoT Devices, 2024](https://www.computer.org/csdl/proceedings-article/sp/2024/313000a070/1RjEaG9OpTa) - 针对 TEE 设计的模糊测试工具，基于 Syzkaller，在开发板上测试，因此 TEE 需要能够运行在开发板环境上，作者来自浙江大学，工具已开源，[SyzTrust](https://github.com/SyzTrust/syztrust)。
+- [Titan: Efficient Multi-target Directed Greybox Fuzzing, 2024](https://www.computer.org/csdl/proceedings-article/sp/2024/313000a059/1RjEaxqvmQ8) - 一篇较为学术的研究定向模糊测试的沦陷，来自香港科技大学。
+- [To Boldly Go Where No Fuzzer Has Gone Before: Finding Bugs in Linux' Wireless Stacks through VirtIO Devices, 2024](https://www.computer.org/csdl/proceedings-article/sp/2024/313000a024/1RjEa0y9RMQ) - 一种基于 VirtIO 设备驱动程序的新型模糊测试工具 [VirtFuzz](https://github.com/cyruscyliu/virtfuzz-evaluation)，从真实设备收集数据，在虚拟环境进行 Fuzz，德国达姆施塔特工业大学安全移动网络实验室（SEEMOO）[Sönke Huster](https://www.computer.org/csdl/search/default?type=author&givenName=Sönke&surname=Huster)。
+
 #### 2023
 
 - [DEVFUZZ: Automatic Device Model-Guided Device Driver Fuzzing, 2023](https://www.computer.org/csdl/pds/api/csdl/proceedings/download-article/1Nrc0AgBCgM/pdf) - 针对驱动的模糊测试，文章指出 [DEVFUZZ](https://github.com/lzto/afl-proxy.git)(已开源) 针对 PCI、USB、RadpiIO、I2C 总线，且不需要实际设备，通过符号执行模拟硬件设备，文章来源 [纽约州立大学石溪分校](http://www.baidu.com/link?url=CNFrDbfV-OGIsAIhXj42MU2R4vvrYFYJs-YoF5tOj1hpIrk9bHzvCM_KeFSpAtV4oGV69Yf3gnwfyEk_FURhr1QOoL9__9c2EqaKnaJdSFXvWa7SJ1Qn___SfZhMFX2oa3yr0jPlOAnHsOqUuyYxEEXiGFIobGIbUTM2fM3JFLSZ9faRv8nRNultM2fefeqTAoWfkzTQ8F09Yp3WdacPYa)。这似乎与 **ARM-M 固件仿真**有关，且使用了 S2E，感兴趣的同学可以阅读华科周威老师 2021 年在 Usenix 上发表的论文 Fuzzware，后续“固件章节有收录”。
@@ -213,7 +226,7 @@
 - [NestFuzz: Enhancing Fuzzing with Comprehensive Understanding of Input Processing Logic, 2023](https://dl.acm.org/doi/10.1145/3576915.3623103):  复旦大学系统软件与安全实验室研究成果，专门针对开源工具进行 Fuzz 的工具 [NestFuzz](https://github.com/fdu-sec/NestFuzz)，仍然是基于 AFL 改进的工具，提出了一种新颖的数据结构，即输入处理树，它可以表示输入格式的整体结构。在模糊测试的第二阶段，NestFuzz 设计了一种级联依赖性感知突变策略。基于已识别的依赖关系，每当 NestFuzz 改变（字段或结构级别）输入时，它都会级联改变其他受影响的字段或子结构以维持结构有效性。
 - [SyzDirect: Directed Greybox Fuzzing for Linux Kernel, 2023](https://dl.acm.org/doi/10.1145/3576915.3623146):  仍然是来自于复旦大学系统软件与安全实验室，好在他们的工具都已开源：[SyzDirect](https://github.com/seclab-fudan/SyzDirect)，基于 Syzkaller 的改进。
 - [PyRTFuzz: Detecting Bugs in Python Runtimes via Two-Level Collaborative Fuzzing, 2023](https://dl.acm.org/doi/10.1145/3576915.3623166):  顾名思义，就是一个用于检测 Python 运行时中的错误的模糊测试工具。它采用了两级模糊的方法，即单元测试级别的模糊和运行时级别的模糊，[PyRTFuzz 已开源](https://github.com/awen-li/PyRTFuzz)，[作者简介](https://awen-li.github.io/)。
-- [Poster: Combining Fuzzing with Concolic Execution for IoT Firmware Testing, 2023](https://dl.acm.org/doi/10.1145/3576915.3624373)：又是一个针对 IoT 固件的 Fuzz 工具。在以前固件模糊测试的基础上结合了符号执行。但是其限制仍然是目标固件要支持全系统仿真。因此，本篇论文仍然没有解决固件 Fuzz 测试的核心问题，即仿真，作者来自于韩国世宗大学。
+- [Poster: Combining Fuzzing with Concolic Execution for IoT Firmware Testing, 2023](https://dl.acm.org/doi/10.1145/3576915.3624373)：又是一个针对 **IoT 固件的 Fuzz** 工具。在以前固件模糊测试的基础上结合了符号执行。但是其限制仍然是目标固件要支持全系统仿真。因此，本篇论文仍然没有解决固件 Fuzz 测试的核心问题，即仿真，作者来自于韩国世宗大学。
 
 #### 2022 ⤵ 
 
@@ -271,6 +284,8 @@
 
 ### 固件
 
+- [LABRADOR: Response Guided Directed Fuzzing for Black-box IoT Devices, 2024](https://www.computer.org/csdl/proceedings-article/sp/2024/313000a127/1Ub23HQTJ1C) - 又是一个针对固件黑盒 Fuzz 的工具，来自于信息工程大学的[Hangtian Liu](https://www.computer.org/csdl/search/default?type=author&givenName=Hangtian&surname=Liu)，也是张超团队的工作。相比 SNIPUZZ、BOOFUZZ 和 FIRM-AFL 能够发现更多的漏洞，同时是 SaTC 发现的漏洞的 8.57 倍。与以前工作不同的是，**LABRADOR 似乎不需要进行固件仿真**，而是在真机上进行 Fuzz 测试，通过网络响应来推断固件的执行跟踪，并推导出测试的代码覆盖率，未见开源。
+- [Poster: Combining Fuzzing with Concolic Execution for IoT Firmware Testing, 2023](https://dl.acm.org/doi/10.1145/3576915.3624373)：又是一个针对 **IoT 固件的 Fuzz** 工具。在以前固件模糊测试的基础上结合了符号执行。但是其限制仍然是目标固件要支持全系统仿真。因此，本篇论文仍然没有解决固件 Fuzz 测试的核心问题，即仿真，作者来自于韩国世宗大学。
 - [Forming Faster Firmware Fuzzers, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/seidel) - *柏林工业大学* Lukas Seidel 提出一种针对 **ARM Cortex-M MCU** 固件进行 Fuzz 的工具，[SAFIREFUZZ](https://github.com/pr0me/SAFIREFUZZ) 已开源，论文总结了过去的 MCU Fuzz 类型，并展现 SAFIREFUZZ 与众不同的地方：SAFIREFUZZ 运行在与目标固件架构相同的操作系统上（例如树莓派），节省了以前的工具使用 QEMU TCG 带来的性能损失，且不需要使用 softmmu，显著提升模糊测试效率。
 - [FirmSolo: Enabling dynamic analysis of binary Linux-based IoT kernel modules, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/angelakopoulos) - *波士顿大学* Ioannis Angelakopoulos 工程师介绍的另外一种 IoT 固件模糊测试解决方案 FirmSolo。以经典的 Firmadyne 为例，传统固件模拟工具专注于用户空间的仿真和测试。而 FirmSole 可以提取固件的内核模块元信息，生成一个可以由 Qemu 加载的新内核，进而可以对这些内核模块进行模糊测试，已开源 [FirmSole ](https://github.com/BUseclab/FirmSolo)。
 - [Fuzzware: Using Precise MMIO Modeling for Effective Firmware Fuzzing, 2022](https://www.usenix.org/conference/usenixsecurity22/presentation/scharnowski) -  使用精准的 MMIO 建模提高固件模糊测试效率，来自于*波鸿鲁尔大学* 。一种针对 **ARM Cortex-M MCU 固件**进行 Fuzz 的工具，使用 **Unicore Engine** 仿真，MMIO 寄存器作为 Fuzz 入口，已开源 [Fuzzware](https://github.com/fuzzware-fuzzer/fuzzware)。 
