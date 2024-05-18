@@ -48,6 +48,16 @@
 
 ### NDSS
 
+#### 2024
+
+- [DeepGo: Predictive Directed Greybox Fuzzing, 2024](https://www.ndss-symposium.org/ndss-paper/deepgo-predictive-directed-greybox-fuzzing/) - 研究团队开发了名为 TitanFuzz 的模糊测试，定向模糊测试（DGF）的一种，利用大模型（LLMs）自动生成和修改程序输入以测试深度学习库，**Fuzz 对象是大模型库**。提高了 TensorFlow 和 PyTorch 库的 API 及代码覆盖率，[已开源](https://github.com/ise-uiuc/TitanFuzz)。来自于 [伊利诺伊大学厄巴纳-香槟分校](http://www.baidu.com/link?url=566ztSNSQ2WfOlFUWm1oB0aaAoDCClM4Pkwn_qEFTrcsBw2llldRLHHHJE0JMD1DauLQEozOSX8t4SF_X_F0zbX0nXUx2TpNkYc_cN2q858ncL3fVJQwJLUs8Gb2-fQi-iOZpLCFtgv4HwVfss4To--mObLC5j_Bg6JwRnRf57UfAtrK1IzS18vKZlnmR2b-UvZs3KUzh4el929UXNX9NmZZcb0sfU47l3sjaWmUuHq) 。
+- [EnclaveFuzz: Finding Vulnerabilities in SGX Applications, 2024](https://www.ndss-symposium.org/ndss-paper/enclavefuzz-finding-vulnerabilities-in-sgx-applications/) - Fuzz 对象是使用了因特尔 SGX 技术的软件，[已开源](https://github.com/vul337/EnclaveFuzz)，文章来自中国科学院信息工程研究所的 Liheng Chen。
+- [Large Language Model guided Protocol Fuzzing, 2024](https://www.ndss-symposium.org/ndss-paper/large-language-model-guided-protocol-fuzzing/) - 研究人员开发了一款以大模型为指导的协议 Fuzz，通过 AI 训练 RFC 文档包含的协议规范，[ChatAFL 已开源](https://github.com/ChatAFLndss/ChatAFL)，文章来自新加坡国立大学的 Ruijie Meng。
+- [MOCK: Optimizing Kernel Fuzzing Mutation with Context-aware Dependency, 2024](https://www.ndss-symposium.org/ndss-paper/mock-optimizing-kernel-fuzzing-mutation-with-context-aware-dependency/) - 通过捕获系统调用的状态关系，优化 Linux syscall 模糊测试效率。针对 Linux 内核的 Fuzz 工具，[待开源](https://github.com/m0ck1ng/mock)，文章来自浙江大学 Jiacheng Xu。
+- [Predictive Context-sensitive Fuzzing, 2024](https://www.ndss-symposium.org/ndss-paper/predictive-context-sensitive-fuzzing/) - 一种**新颖的统计覆盖率**的思路。目前大多数 Fuzz 工具都是通过边（edge）作为覆盖引导，edge coverage 是函数的控制流，只考虑代码执行而忽略内部程序状态。本文使用程序分析领域的上下文敏感（context-sensitivity）作为覆盖率统计，结合 calling-context 和 edge coverage，[已开源](https://github.com/eurecom-s3/predictive-cs-fuzzing)，文章来自罗马大学的 Pietro Borrello。
+- [ReqsMiner: Automated Discovery of CDN Forwarding Request Inconsistencies and DoS Attacks with Grammar-based Fuzzing, 2024](https://www.ndss-symposium.org/ndss-paper/reqsminer-automated-discovery-of-cdn-forwarding-request-inconsistencies-and-dos-attacks-with-grammar-based-fuzzing/) - 针对 CDN 请求不一致的 Fuzz 工具，[已开源](https://github.com/Konano/ReqsMiner)，工作来自清华大学张超团队。
+- [ShapFuzz: Efficient Fuzzing via Shapley-Guided Byte Selection, 2024](https://www.ndss-symposium.org/ndss-paper/shapfuzz-efficient-fuzzing-via-shapley-guided-byte-selection/) - 一种指导字节变异的新颖方案，优化变异算法，[已开源](https://github.com/ShapFuzz/ShapFuzz)，在 AFL++ 基础之上增加了一个新的 `-w` 命令选项，来自清华大学网络与信息安全实验室。
+
 #### 2023
 
 - [Assessing the Impact of Interface Vulnerabilities in Compartmentalized Software, 2023](https://www.ndss-symposium.org/ndss-paper/assessing-the-impact-of-interface-vulnerabilities-in-compartmentalized-software/) - 针对上下文隔离的 API 接口（CIV，这是作者定义的一个概念，主要是指沙箱等隔离环境，应用划分、隔离后，应用的不同部分之间在交互时的控制和数据依赖关系，会在 interface 引入新的漏洞）进行 Fuzzing 的方案。Github 文档描述非常详细，[已开源](https://github.com/conffuzz/conffuzz)，当前作者已针对  Okular/ImageMagick/Apache/exif  等诸多软件进行了模糊测试。该项研究来自曼彻斯特大学。
