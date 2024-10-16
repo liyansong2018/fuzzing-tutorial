@@ -97,6 +97,19 @@
 
 ### USENIX Security
 
+#### 2024
+
+- [A Binary-level Thread Sanitizer or Why Sanitizing on the Binary Level is Hard, 2024](https://www.usenix.org/conference/usenixsecurity24/presentation/schilling) - 二进制 [TSAN](https://github.com/CISPA-SysSec/binary-tsan)（已开源），这是一种实现针对 Linux x86_64 二进制目标的数据竞争检测器。目前，已有 RETROWRITE 将 ASAN 白盒插桩应用于二进制插桩，但是还没有关于 MSAN/UBSAN/TSAN 的二进制实现。本文就是实现了一个 TSAN 的黑盒插桩工具。论文来自*亥姆霍兹信息安全中心*  Joschua Schilling。
+- [Critical Code Guided Directed Greybox Fuzzing for Commits, 2024](https://www.usenix.org/conference/usenixsecurity24/presentation/xiang-yi) - 研究员提出了一种定向灰盒模糊测试器 [WAFLGO](https://github.com/He1loNice/WAFLGo)（已开源），用于**从 commit 中识别 bug**。论文来自*浙江大学* 。
+- [EL3XIR: Fuzzing COTS Secure Monitors, 2024](https://www.usenix.org/conference/usenixsecurity24/presentation/lindenmeier) - 一种针对 ARM TrustZone 的 TEE 的引用监视器，即安全内核的 Fuzz 框架，[EL3XIR](https://github.com/HexHive/EL3XIR) 已开源。
+- [Fuzzing BusyBox: Leveraging LLM and Crash Reuse for Embedded Bug Unearthing, 2024](https://www.usenix.org/conference/usenixsecurity24/presentation/asmita) - 顾名思义，通过利用大语言模型（LLM）生成目标特定的初始种子来增强模糊测试。**利用大模型 Fuzz** 实现挖掘嵌入式系统中 Busybox 的漏洞。研究者使用 OpenAI 的 GPT-4 模型生成初始种子。论文来自*加州大学戴维斯分校*。
+- [HYPERPILL: Fuzzing for Hypervisor-bugs by leveraging the Hardware Virtualization Interface, 2024](https://www.usenix.org/conference/usenixsecurity24/presentation/bulekov) - 利用硬件虚拟化接口对 Hypervisor 虚拟机监视器进行 Fuzz。[HyperPill](https://github.com/HexHive/HyperPill)，研究来自*洛桑联邦理工学院*。
+- [MultiFuzz: A Multi-Stream Fuzzer For Testing Monolithic Firmware, 2024](https://www.usenix.org/conference/usenixsecurity24/presentation/chesser) - 一个针对**固件 MMIO** 的 Fuzz 方案，利用多输入流改进 Fuzz，需要固件仿真平台的支持，貌似基于 [Fuzzware](https://github.com/MultiFuzz/MultiFuzz)，因此，是基于已有仿真平台所做的 Fuzz 改进。研究来自*阿德莱德大学*。
+- [SDFuzz: Target States Driven Directed Fuzzing, 2024](https://www.usenix.org/conference/usenixsecurity24/presentation/li-penghui) - 这是一种由目标状态驱动的高效定向模糊测试工具，SDFuzz。基于一个新的概念目标状态，由目标状态和静态分析驱动 Fuzz，少走弯路，研究来自*清华大学网络与信息安全实验室的张超团队*，未见开源。
+- [SHiFT: Semi-hosted Fuzz Testing for Embedded Applications, 2024](https://www.usenix.org/conference/usenixsecurity24/presentation/mera) - 一个**针对 MCU 固件**的 Fuzz 方案，与之前工作不太相同的是，[SHiFT](https://github.com/RiS3-Lab/SHiFT) 采用半托管方案，非全仿真，避免不必要的外设模拟，研究者特意强调方案已开源。论文来自*东北大学*。
+- [Towards Generic Database Management System Fuzzing, 2024]([Towards Generic Database Management System Fuzzing | USENIX](https://www.usenix.org/conference/usenixsecurity24/presentation/yang-yupeng)) - 没太多好说的，一个针对数据库的 Fuzz 工具，主要将针对关系型数据库的 Fuzz 扩展到非关系型数据库。
+- [WhisperFuzz: White-Box Fuzzing for Detecting and Locating Timing Vulnerabilities in Processors, 2024]([WhisperFuzz: White-Box Fuzzing for Detecting and Locating Timing Vulnerabilities in Processors | USENIX](https://www.usenix.org/conference/usenixsecurity24/presentation/borkar)) - 用于检测和定位处理器中时序漏洞的白盒模糊测试，*WhisperFuzz* 在 RISC-V 处理器中检测到 12 个新的时序漏洞。研究来自*印度理工学院马德拉斯*分校的 Pallavi Borkar，未见开源。
+
 #### 2023
 
 - [Fuzztruction: Using Fault Injection-based Fuzzing to Leverage Implicit Domain Knowledge, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/bars) -  *波鸿鲁尔大学*  Nils Bars，提出一种新颖的模糊测试方案，不是变异种子，而是根据源码中的编码含义，变异数据生成器，甚至是注入错误，绕过一些判断，以便输入的用例几乎是预期的格式。这样的数据绕过了初始解析。[工具原型已开源](https://github.com/fuzztruction/fuzztruction)，提供了 Docker 虚拟机环境，10G+，感兴趣的同学如果想尝试此工具，请注意预留足够的磁盘空间。
@@ -294,6 +307,8 @@
 
 ### 固件
 
+- [SHiFT: Semi-hosted Fuzz Testing for Embedded Applications, 2024](https://www.usenix.org/conference/usenixsecurity24/presentation/mera) - 一个**针对 MCU 固件**的 Fuzz 方案，与之前工作不太相同的是，[SHiFT](https://github.com/RiS3-Lab/SHiFT) 采用半托管方案，非全仿真，避免不必要的外设模拟，研究者特意强调方案已开源。论文来自*东北大学*。
+- [MultiFuzz: A Multi-Stream Fuzzer For Testing Monolithic Firmware, 2024](https://www.usenix.org/conference/usenixsecurity24/presentation/chesser) - 一个针对固件 MMIO 的 Fuzz 方案，利用多输入流改进 Fuzz，需要固件仿真平台的支持，貌似基于 [Fuzzware](https://github.com/MultiFuzz/MultiFuzz)，因此，是基于已有仿真平台所做的 Fuzz 改进。研究来自*阿德莱德大学*。
 - [LABRADOR: Response Guided Directed Fuzzing for Black-box IoT Devices, 2024](https://www.computer.org/csdl/proceedings-article/sp/2024/313000a127/1Ub23HQTJ1C) - 又是一个针对固件黑盒 Fuzz 的工具，来自于信息工程大学的[Hangtian Liu](https://www.computer.org/csdl/search/default?type=author&givenName=Hangtian&surname=Liu)，也是张超团队的工作。相比 SNIPUZZ、BOOFUZZ 和 FIRM-AFL 能够发现更多的漏洞，同时是 SaTC 发现的漏洞的 8.57 倍。与以前工作不同的是，**LABRADOR 似乎不需要进行固件仿真**，而是在真机上进行 Fuzz 测试，通过网络响应来推断固件的执行跟踪，并推导出测试的代码覆盖率，未见开源。
 - [Poster: Combining Fuzzing with Concolic Execution for IoT Firmware Testing, 2023](https://dl.acm.org/doi/10.1145/3576915.3624373)：又是一个针对 **IoT 固件的 Fuzz** 工具。在以前固件模糊测试的基础上结合了符号执行。但是其限制仍然是目标固件要支持全系统仿真。因此，本篇论文仍然没有解决固件 Fuzz 测试的核心问题，即仿真，作者来自于韩国世宗大学。
 - [Forming Faster Firmware Fuzzers, 2023](https://www.usenix.org/conference/usenixsecurity23/presentation/seidel) - *柏林工业大学* Lukas Seidel 提出一种针对 **ARM Cortex-M MCU** 固件进行 Fuzz 的工具，[SAFIREFUZZ](https://github.com/pr0me/SAFIREFUZZ) 已开源，论文总结了过去的 MCU Fuzz 类型，并展现 SAFIREFUZZ 与众不同的地方：SAFIREFUZZ 运行在与目标固件架构相同的操作系统上（例如树莓派），节省了以前的工具使用 QEMU TCG 带来的性能损失，且不需要使用 softmmu，显著提升模糊测试效率。
