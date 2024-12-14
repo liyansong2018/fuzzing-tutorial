@@ -239,6 +239,28 @@
 
 ### ACM CCS
 
+#### 2024
+
+- [LIFTFUZZ: Validating Binary Lifters through Context-aware Fuzzing with GPT, 2024](https://dl.acm.org/doi/10.1145/3658644.3670276):  所谓的 binay lifter，就是将二进制转化为统一的中间语言（IR），这是在逆向工程中常见的一种方式，LiftFuzz 是一个利用指令上下文感知模糊测试来验证 binary lifeter 的新框架。LiftFuzz 利用汇编语言模型来学习指令之间的交互，并利用这些知识生成测试用例，作者来自香港中文大学的周雨桐，说要开源，但是一直没有[开源](https://github.com/zyt755/LIFTFUZZ)。
+- [https://github.com/zyt755/LIFTFUZZ, 2024](https://dl.acm.org/doi/10.1145/3658644.3670278):  浙江大学张明雪团队，设计了一种新的解决方案 FuzzCache，它引入了一种基于软件的数据缓存机制，通过将数据库和网络请求中的数据存储到缓存中，规避了重复且昂贵的数据读取操作，也就是说 FuzzCache 用于提高 Web Fuzz 的效率。[FuzzCache](https://github.com/secureweb/fuzzcache) 已开源。
+- [RANsacked: A Domain-Informed Approach for Fuzzing LTE and 5G RAN-Core Interfaces, 2024](https://dl.acm.org/doi/10.1145/3658644.3670320):  针对 LTE/5G 空口平台 RAN-Core 的 Fuzz，其中衍生的 [ASNFuzzGen](https://github.com/fics/asnfuzzgen) 已开源，来自佛罗里达大学的学者，这种针对蜂窝网的研究过于学术化，工业界关注不多。
+- [RIoTFuzzer: Companion App Assisted Remote Fuzzing for Detecting Vulnerabilities in IoT Devices, 2024](https://dl.acm.org/doi/10.1145/3658644.3670342):  利用设备配套的 App，对 IoT 设备进行 Fuzz。其实跟 IoT 关系不大，主要思路就是利用 App 逆向，找到设备远控等数据包的格式，生成对应的测试用例。论文对应的[脚本](https://github.com/kzLiu2017/RIoTFuzzer)已开源，作者来自东南大学。
+- [On Understanding and Forecasting Fuzzers Performance with Static Analysis, 2024](https://dl.acm.org/doi/10.1145/3658644.3670348):  将编译时提取的静态分析特征与各种模糊测试技术的性能结果相关联，为特定程序提出定制的模糊测试器配置，作者是欧洲通信学院的华人。
+- [FOX: Coverage-guided Fuzzing as Online Stochastic Control, 2024](https://dl.acm.org/doi/10.1145/3643659.3648562):  提高覆盖引导的边缘覆盖率算法，当前算法已在 AFL++ 上实现，已[开源](https://github.com/FOX-Fuzz/FOX)，这种针对 AFL 算法改进的论文近些年层出不穷，有些还是值得一看，该研究来自香港科技大学的Dongdong She。
+- [Prompt Fuzzing for Fuzz Driver Generation, 2024](https://arxiv.org/abs/2312.17677):  通过迭代地生成模糊驱动来探索未发现的库代码，PromptFuzz 的核心思想就是通过覆盖指导指导 LLM 生成所需的模糊驱动，并利用程序错误预言保证其有效性，使用了 ChatGPT prompt 生成 Harness，但是其引入了三种新的后端处理思路来将 LLM 生成的错误harness 进行剔除，该研究来自腾讯安全大数据实验室。
+- [DarthShader: Fuzzing WebGPU Shader Translators & Compilers, 2024](https://dl.acm.org/doi/10.1145/3658644.3690209):  针对 Web GPU 着色器翻译器和编译器的模糊测试项目，[darthshader](https://github.com/wgslfuzz/darthshader) 已开源，开箱即用，研究来自 CISPA 亥姆霍兹信息安全中心。
+- [Collapse Like A House of Cards: Hacking Building Automation System Through Fuzzing, 2024](https://dl.acm.org/doi/10.1145/3658644.3690216):  针对楼栋自动化系统 BAS 的 Fuzz 测试，没什么好说的，就是一个比较新颖的领域，研究来自德雷塞尔大学的张悦。
+- [OSmart: Whitebox Program Option Fuzzing, 2024](https://dl.acm.org/doi/10.1145/3658644.3690228):  OSmart 是一个自动推断程序的选项，并组合各种选项，进行 Fuzz 的方案，通过分析程序的选项处理逻辑，可以更智能地生成测试用例，可惜暂时没有看到开源，研究来自中国科学院软件研究所。
+- [Program Environment Fuzzing, 2024](https://dl.acm.org/doi/10.1145/3658644.3690229):  论文将程序运行所需要的环境都视为外部入口，进行 Fuzz 测试，对整个交互过程进行全面覆盖，包括网络服务器、图形界面应用、编译器等在内的任何 Linux 用户模式软件，[EnvFuzz](https://github.com/GJDuck/EnvFuzz) 已开源，几个月前曾尝试过这个工具，可以实现一键 Fuzz，但是分析崩溃需要耗费大量时间，研究来自新加坡国立大学。
+- [ProphetFuzz: Fully Automated Prediction and Fuzzing of High-Risk Option Combinations with Only Documentation via Large Language Model, 2024](https://dl.acm.org/doi/10.1145/3658644.3690231):  提出了一种基于大型语言模型（LLM）的全自动工具 ProphetFuzz，用于预测应用程序的高风险选项组合并进行模糊测试。[ProphetFuzz](https://github.com/NASP-THU/ProphetFuzz) 已开源，来自‌北京中关村实验室。
+- [Leveraging Binary Coverage for Effective Generation Guidance in Kernel Fuzzing, 2024](https://dl.acm.org/doi/10.1145/3658644.3690232):  一种使用内核二进制覆盖率反馈对内核进行 Fuzz 的方案，工具原型 KBinCov 未见开源，作者通过集成在 Syzkaller 中，对比原始的 kov，研究来自清华大学。
+- [Toss a Fault to BpfChecker: Revealing Implementation Flaws for eBPF runtimes with Differential Fuzzing, 2024](https://dl.acm.org/doi/10.1145/3658644.3690237):  论文提出了一个差分模糊测试框架 BpfChecker，用于检测 eBPF 运行时中的实现缺陷。它利用 eBPF 程序作为输入，对各种 eBPF 运行时中的关键状态进行差分测试以发现实现缺陷，获得了 80 万刀的奖励！[BpfChecker](https://github.com/blocksecteam/BpfChecker) 已开源，作者来自浙江大学。
+- [No Peer, no Cry: Network Application Fuzzing via Fault Injection, 2024](https://dl.acm.org/doi/10.1145/3658644.3690274):  通过故障注入，迫使目标进程进入一种奇怪的状态，进行 Fuzz。这项研究似乎拓展了故障注入的概念，说实话，看了一段内容，还是没太理解研究中所描述的故障注入，看起来是进行一些数据包微调。[Fuzztruction-Net](https://github.com/fuzztruction/fuzztruction-net-experiments) 原型已开源。
+- [Fuzz to the Future: Uncovering Occluded Future Vulnerabilities via Robust Fuzzing, 2024](https://dl.acm.org/doi/10.1145/3658644.3690278):  确实是一项开创性的研究，通过二进制修补绕过崩溃代码，继续 Fuzz，虽然思想我们很容易理解，但是之前未见到自动化工具，[FlakJack](https://github.com/sefcom/flakjack) 就这么实现了，已开源，研究来自亚利桑那州立大学。
+- [CountDown: Refcount-guided Fuzzing for Exposing Temporal Memory Errors in Linux Kernel, 2024](https://dl.acm.org/doi/10.1145/3658644.3690320):  为了主动触发与引用计数相关的 UAF 错误，论文提出了一种新型的引用计数引导内核模糊器 CountDown。CountDown 从内核执行中收集各种引用计数操作，并根据常访问的引用计数重塑系统调用关系。研究来自美国宾夕法尼亚州立大学斯泰特科利奇分校华人，未见开源。
+- [Fuzzing JavaScript Engines with a Graph-based IR, 2024](https://dl.acm.org/doi/10.1145/3658644.3690336):  基于图的中间表示 FlowIR 直接将 JS 控制流和数据流表示为变异目标，即针对 JS 引擎的 Fuzz，研究来自国防科技大学，未见开源。
+- [CrossFire: Fuzzing macOS Cross-XPU Memory on Apple Silicon, 2024](https://dl.acm.org/doi/10.1145/3658644.3690376):  论文提出了 CrossFire，这是第一个针对 Apple Silicon XPU 的模糊测试器，研究来自浙江大学，未见开源。
+
 #### 2023
 
 - [DSFuzz: Detecting Deep State Bugs with Dependent State Exploration, 2023](https://dl.acm.org/doi/10.1145/3576915.3616594):  基于深度学习研究状态机与代码路径的关系，简言之就是一个针对状态机建模，以提高代码覆盖率，接近千禧年出生的华人[Yinxi Liu]([Yinxi Liu](https://yinxi.site/))。
