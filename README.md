@@ -107,8 +107,8 @@
 - [MultiFuzz: A Multi-Stream Fuzzer For Testing Monolithic Firmware, 2024](https://www.usenix.org/conference/usenixsecurity24/presentation/chesser) - 一个针对**固件 MMIO** 的 Fuzz 方案，利用多输入流改进 Fuzz，需要固件仿真平台的支持，貌似基于 [Fuzzware](https://github.com/MultiFuzz/MultiFuzz)，因此，是基于已有仿真平台所做的 Fuzz 改进。研究来自*阿德莱德大学*。
 - [SDFuzz: Target States Driven Directed Fuzzing, 2024](https://www.usenix.org/conference/usenixsecurity24/presentation/li-penghui) - 这是一种由目标状态驱动的高效定向模糊测试工具，SDFuzz。基于一个新的概念目标状态，由目标状态和静态分析驱动 Fuzz，少走弯路，研究来自*清华大学网络与信息安全实验室的张超团队*，未见开源。
 - [SHiFT: Semi-hosted Fuzz Testing for Embedded Applications, 2024](https://www.usenix.org/conference/usenixsecurity24/presentation/mera) - 一个**针对 MCU 固件**的 Fuzz 方案，与之前工作不太相同的是，[SHiFT](https://github.com/RiS3-Lab/SHiFT) 采用半托管方案，非全仿真，避免不必要的外设模拟，研究者特意强调方案已开源。论文来自*东北大学*。
-- [Towards Generic Database Management System Fuzzing, 2024]([Towards Generic Database Management System Fuzzing | USENIX](https://www.usenix.org/conference/usenixsecurity24/presentation/yang-yupeng)) - 没太多好说的，一个针对数据库的 Fuzz 工具，主要将针对关系型数据库的 Fuzz 扩展到非关系型数据库。
-- [WhisperFuzz: White-Box Fuzzing for Detecting and Locating Timing Vulnerabilities in Processors, 2024]([WhisperFuzz: White-Box Fuzzing for Detecting and Locating Timing Vulnerabilities in Processors | USENIX](https://www.usenix.org/conference/usenixsecurity24/presentation/borkar)) - 用于检测和定位处理器中时序漏洞的白盒模糊测试，*WhisperFuzz* 在 RISC-V 处理器中检测到 12 个新的时序漏洞。研究来自*印度理工学院马德拉斯*分校的 Pallavi Borkar，未见开源。
+- [Towards Generic Database Management System Fuzzing, 2024](https://www.usenix.org/conference/usenixsecurity24/presentation/yang-yupeng) - 没太多好说的，一个针对数据库的 Fuzz 工具，主要将针对关系型数据库的 Fuzz 扩展到非关系型数据库。
+- [WhisperFuzz: White-Box Fuzzing for Detecting and Locating Timing Vulnerabilities in Processors, 2024](https://www.usenix.org/conference/usenixsecurity24/presentation/borkar) - 用于检测和定位处理器中时序漏洞的白盒模糊测试，*WhisperFuzz* 在 RISC-V 处理器中检测到 12 个新的时序漏洞。研究来自*印度理工学院马德拉斯*分校的 Pallavi Borkar，未见开源。
 
 #### 2023
 
