@@ -50,7 +50,7 @@
 
 #### 2024
 
-- [DeepGo: Predictive Directed Greybox Fuzzing, 2024](https://www.ndss-symposium.org/ndss-paper/deepgo-predictive-directed-greybox-fuzzing/) - 研究团队开发了名为 TitanFuzz 的模糊测试，定向模糊测试（DGF）的一种，利用大模型（LLMs）自动生成和修改程序输入以测试深度学习库，**Fuzz 对象是大模型库**。提高了 TensorFlow 和 PyTorch 库的 API 及代码覆盖率，[已开源](https://github.com/ise-uiuc/TitanFuzz)。来自于 [伊利诺伊大学厄巴纳-香槟分校](http://www.baidu.com/link?url=566ztSNSQ2WfOlFUWm1oB0aaAoDCClM4Pkwn_qEFTrcsBw2llldRLHHHJE0JMD1DauLQEozOSX8t4SF_X_F0zbX0nXUx2TpNkYc_cN2q858ncL3fVJQwJLUs8Gb2-fQi-iOZpLCFtgv4HwVfss4To--mObLC5j_Bg6JwRnRf57UfAtrK1IzS18vKZlnmR2b-UvZs3KUzh4el929UXNX9NmZZcb0sfU47l3sjaWmUuHq) 。
+- [DeepGo: Predictive Directed Greybox Fuzzing, 2024](https://www.ndss-symposium.org/ndss-paper/deepgo-predictive-directed-greybox-fuzzing/) - 一种名为 DeepGo 的预测式定向性灰盒 Fuzzing 方法，通过结合历史和预测信息，利用深度神经网络和强化学习引导模糊测试达到目标路径，优化测试效率。作者来自国防科技大学计算机学院。
 - [EnclaveFuzz: Finding Vulnerabilities in SGX Applications, 2024](https://www.ndss-symposium.org/ndss-paper/enclavefuzz-finding-vulnerabilities-in-sgx-applications/) - Fuzz 对象是使用了因特尔 SGX 技术的软件，[已开源](https://github.com/vul337/EnclaveFuzz)，文章来自中国科学院信息工程研究所的 Liheng Chen。
 - [Large Language Model guided Protocol Fuzzing, 2024](https://www.ndss-symposium.org/ndss-paper/large-language-model-guided-protocol-fuzzing/) - 研究人员开发了一款以大模型为指导的协议 Fuzz，通过 AI 训练 RFC 文档包含的协议规范，[ChatAFL 已开源](https://github.com/ChatAFLndss/ChatAFL)，文章来自新加坡国立大学的 Ruijie Meng。
 - [MOCK: Optimizing Kernel Fuzzing Mutation with Context-aware Dependency, 2024](https://www.ndss-symposium.org/ndss-paper/mock-optimizing-kernel-fuzzing-mutation-with-context-aware-dependency/) - 通过捕获系统调用的状态关系，优化 Linux syscall 模糊测试效率。针对 Linux 内核的 Fuzz 工具，[待开源](https://github.com/m0ck1ng/mock)，文章来自浙江大学 Jiacheng Xu。
